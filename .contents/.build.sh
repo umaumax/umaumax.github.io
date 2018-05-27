@@ -11,3 +11,4 @@ done
 set -x
 mv _book/* ../
 rm -rf _book/
+git add ../
