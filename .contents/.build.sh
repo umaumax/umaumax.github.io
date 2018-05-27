@@ -9,6 +9,5 @@ for name in $(ls ../); do
 	rm -r "../$name"
 done
 set -x
-mv _book/* ../
-rm -rf _book/
+cp _book/* ../
 git add ../
