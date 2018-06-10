@@ -10,5 +10,7 @@ for name in $(ls ../); do
 	rm -r "../$name"
 done
 set -x
+cp README.md ../
+cp -r _layouts/ ../
 cp -r _book/* ../
 git add ../
