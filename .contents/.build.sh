@@ -11,6 +11,6 @@ for name in $(ls ../); do
 done
 set -x
 cp README.md ../
-cp -r _layouts/ ../
+cp -r _layouts ../
 cp -r _book/* ../
 git add ../
