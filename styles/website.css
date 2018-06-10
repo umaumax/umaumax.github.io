@@ -1,0 +1,13 @@
+/* for debug */
+
+/* h1 { */
+
+/* color: #FF0000; */
+
+/* } */
+
+.markdown-section code {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+    font-size: 1.0em !important;
+    font-style: normal !important;
+}
