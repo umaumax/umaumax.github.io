@@ -14,6 +14,17 @@
     if resource.url %}
     <link rel="stylesheet" href="{{ resource.url }}"> {% else %}
     <link rel="stylesheet" href="{{ resource.path|resolveAsset }}"> {% endif %} {% endfor %} {% endblock %} {% block head %}{% endblock %}
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
+    <script>
+        var initPrettyPrint = function() {
+            Array.prototype.slice.call(document.querySelectorAll("body pre")).forEach(function(pre) {
+                pre.setAttribute("class", "prettyprint");
+            });
+            PR.prettyPrint();
+        };
+        window.addEventListener("load", initPrettyPrint, false);
+    </script>
 </head>
 
 <body>
