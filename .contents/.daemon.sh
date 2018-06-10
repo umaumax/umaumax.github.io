@@ -1,5 +1,5 @@
-#!/usr/bin/env sh
-# /bin:/usr/bin
+#!/usr/bin/env bash
+# default $PATH is /bin:/usr/bin
 PATH=/usr/sbin:/usr/local/bin/:$PATH
 
 cd $(dirname $0)
