@@ -11,7 +11,10 @@
   - Ubuntu
     * [Dual Display](os/Ubuntu/dual-display.md)
     * [SUID SGID Sticky Bit](os/Ubuntu/SUID-SGID-sticky-bit.md)
+- Python
+  * [Tips](python/tips.md)
 - Shell
   * [Array](shell/array.md)
+  * [Cmd](shell/cmd.md)
 - Terminal
   * [Terminator](terminal/terminator.md)
