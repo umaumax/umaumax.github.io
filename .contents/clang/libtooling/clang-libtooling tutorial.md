@@ -114,6 +114,6 @@ int main() {
 
 [run]
 ```
-./loop-detector hello.cpp -- -std=c++11 -I/usr/local/Cellar/llvm/6.0.0/include/c++/v1 -I/usr/local/include -I/usr/local/Cellar/llvm/6.0.0/lib/clang/6.0.0/include -I/usr/include
+./loop-detector test.cpp -- -std=c++11 -I/usr/local/Cellar/llvm/6.0.0/include/c++/v1 -I/usr/local/include -I/usr/local/Cellar/llvm/6.0.0/lib/clang/6.0.0/include -I/usr/include
 ```
 ※ インクルードヘッダは`clang++ -v`で確認すると良い
