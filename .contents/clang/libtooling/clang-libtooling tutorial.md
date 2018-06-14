@@ -56,6 +56,7 @@ int main(int argc, const char **argv) {
 ```sh
 #!/usr/bin/env bash
 clang++ $@ \
+	-Wl,--start-group \
 	$(llvm-config --cxxflags) \
 	$(llvm-config --ldflags --libs --system-libs) \
 	-lclang \
@@ -79,11 +80,14 @@ clang++ $@ \
 	-lclangSerialization \
 	-lclangToolingCore \
 	-lclangTooling \
-	-lclangFormat
+	-lclangFormat \
+	-Wl,--end-group
 ```
 
+* macでは`-Wl,--start-group`,`-Wl,--end-group`は不要だった
+
 ```
-./build-clang-tools.sh build-loop-cdetector
+./build-clang-tools.sh loop-detector.cpp
 ```
 
 [test.cpp]
@@ -114,6 +118,11 @@ int main() {
 
 [run]
 ```
+# mac
 ./loop-detector test.cpp -- -std=c++11 -I/usr/local/Cellar/llvm/6.0.0/include/c++/v1 -I/usr/local/include -I/usr/local/Cellar/llvm/6.0.0/lib/clang/6.0.0/include -I/usr/include
+# ubuntu
+./loop-detector test.cpp --
 ```
+
+* 
 ※ インクルードヘッダは`clang++ -v`で確認すると良い

@@ -485,6 +485,7 @@ int main(int argc, const char **argv) {
 <p>[build-clang-tools.sh]</p>
 <pre><code class="lang-sh"><span class="hljs-meta">#!/usr/bin/env bash</span>
 clang++ <span class="hljs-variable">$@</span> \
+    -Wl,--start-group \
     $(llvm-config --cxxflags) \
     $(llvm-config --ldflags --libs --system-libs) \
     -lclang \
@@ -508,9 +509,13 @@ clang++ <span class="hljs-variable">$@</span> \
     -lclangSerialization \
     -lclangToolingCore \
     -lclangTooling \
-    -lclangFormat
+    -lclangFormat \
+    -Wl,--end-group
 </code></pre>
-<pre><code>./build-clang-tools.sh build-loop-cdetector
+<ul>
+<li>mac&#x3067;&#x306F;<code>-Wl,--start-group</code>,<code>-Wl,--end-group</code>&#x306F;&#x4E0D;&#x8981;&#x3060;&#x3063;&#x305F;</li>
+</ul>
+<pre><code>./build-clang-tools.sh loop-detector.cpp
 </code></pre><p>[test.cpp]</p>
 <pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
 <span class="hljs-keyword">class</span> Y {
@@ -536,8 +541,13 @@ clang++ <span class="hljs-variable">$@</span> \
 }
 </code></pre>
 <p>[run]</p>
-<pre><code>./loop-detector test.cpp -- -std=c++11 -I/usr/local/Cellar/llvm/6.0.0/include/c++/v1 -I/usr/local/include -I/usr/local/Cellar/llvm/6.0.0/lib/clang/6.0.0/include -I/usr/include
-</code></pre><p>&#x203B; &#x30A4;&#x30F3;&#x30AF;&#x30EB;&#x30FC;&#x30C9;&#x30D8;&#x30C3;&#x30C0;&#x306F;<code>clang++ -v</code>&#x3067;&#x78BA;&#x8A8D;&#x3059;&#x308B;&#x3068;&#x826F;&#x3044;</p>
+<pre><code># mac
+./loop-detector test.cpp -- -std=c++11 -I/usr/local/Cellar/llvm/6.0.0/include/c++/v1 -I/usr/local/include -I/usr/local/Cellar/llvm/6.0.0/lib/clang/6.0.0/include -I/usr/include
+# ubuntu
+./loop-detector test.cpp --
+</code></pre><ul>
+<li>&#x203B; &#x30A4;&#x30F3;&#x30AF;&#x30EB;&#x30FC;&#x30C9;&#x30D8;&#x30C3;&#x30C0;&#x306F;<code>clang++ -v</code>&#x3067;&#x78BA;&#x8A8D;&#x3059;&#x308B;&#x3068;&#x826F;&#x3044;</li>
+</ul>
 
                                 
                                 </section>
@@ -573,7 +583,7 @@ clang++ <span class="hljs-variable">$@</span> \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Clang Libtooling Tutorial","level":"1.2.1.1","depth":3,"next":{"title":"Font","level":"1.3","depth":1,"ref":"","articles":[{"title":"Monaco","level":"1.3.1","depth":2,"path":"font/monaco.md","ref":"font/monaco.md","articles":[]}]},"previous":{"title":"Libtooling","level":"1.2.1","depth":2,"ref":"","articles":[{"title":"Clang Libtooling Tutorial","level":"1.2.1.1","depth":3,"path":"clang/libtooling/clang-libtooling tutorial.md","ref":"clang/libtooling/clang-libtooling tutorial.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"clang/libtooling/clang-libtooling tutorial.md","mtime":"2018-06-10T10:16:22.295Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-13T11:25:53.140Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Clang Libtooling Tutorial","level":"1.2.1.1","depth":3,"next":{"title":"Font","level":"1.3","depth":1,"ref":"","articles":[{"title":"Monaco","level":"1.3.1","depth":2,"path":"font/monaco.md","ref":"font/monaco.md","articles":[]}]},"previous":{"title":"Libtooling","level":"1.2.1","depth":2,"ref":"","articles":[{"title":"Clang Libtooling Tutorial","level":"1.2.1.1","depth":3,"path":"clang/libtooling/clang-libtooling tutorial.md","ref":"clang/libtooling/clang-libtooling tutorial.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"clang/libtooling/clang-libtooling tutorial.md","mtime":"2018-06-14T13:12:39.864Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-14T16:51:49.672Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
