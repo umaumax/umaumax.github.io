@@ -1,9 +1,5 @@
 # Your Book Title
 
-- Book
-  - Os
-    - Ubuntu
-      * [ubuntu-ja-16.04-desktop-amd64.iso init setup](_book/os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.md)
 - Clang
   - Libtooling
     * [Clang Libtooling Tutorial](clang/libtooling/clang-libtooling tutorial.md)
