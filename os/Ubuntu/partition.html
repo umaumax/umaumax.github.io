@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <title>Dual Display · GitBook</title>
+    <title>Partition · GitBook</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="">
     <meta name="generator" content="GitBook 3.2.3">   
@@ -45,8 +45,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="partition.html" />
+    <link rel="next" href="SUID-SGID-sticky-bit.html" />
     
+    
+    <link rel="prev" href="dual-display.html" />
     
 
 
@@ -313,7 +315,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.6.1.1" data-path="dual-display.html">
+        <li class="chapter " data-level="1.6.1.1" data-path="dual-display.html">
             
                 <a href="dual-display.html">
             
@@ -326,7 +328,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.1.2" data-path="partition.html">
+        <li class="chapter active" data-level="1.6.1.2" data-path="partition.html">
             
                 <a href="partition.html">
             
@@ -514,7 +516,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Dual Display</a>
+        <a href="../.." >Partition</a>
     </h1>
 </div>
 
@@ -529,13 +531,52 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="dual-display">dual display</h1>
-<h2 id="todo-google">TODO GOOGLE</h2>
+                                <h1 id="&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;-memo">&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3; memo</h1>
+<h2 id="&#x57FA;&#x672C;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;">&#x57FA;&#x672C;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;</h2>
+<p>&#x6700;&#x5927;&#x3067;4&#x500B;
+&#x8D77;&#x52D5;&#x30C9;&#x30E9;&#x30A4;&#x30D6;&#x3068;&#x3057;&#x3066;&#x6307;&#x5B9A;&#x53EF;&#x80FD;&#x3089;&#x3057;&#x3044;</p>
+<h2 id="&#x8AD6;&#x7406;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;">&#x8AD6;&#x7406;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;</h2>
+<p>&#x6700;&#x5927;&#x3067;128&#x500B;?
+&#x8D77;&#x52D5;&#x30C9;&#x30E9;&#x30A4;&#x30D6;&#x3068;&#x3057;&#x3066;&#x6307;&#x5B9A;&#x53EF;&#x80FD;&#x3067;&#x306F;&#x306A;&#x3044;&#x3089;&#x3057;&#x3044;</p>
+<p>&#x57FA;&#x672C;&#x7684;&#x306B;&#x306F;&#xFF0C;&#x8AD6;&#x7406;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x533A;&#x5207;&#x3063;&#x3066;&#x3044;&#x304F;&#x3053;&#x3068;&#x306B;&#x306A;&#x308B;&#x306F;&#x305A;
+&#x9014;&#x4E2D;&#x3067;&#x62E1;&#x5F35;&#x3059;&#x308B;&#x3053;&#x3068;&#x3092;&#x524D;&#x63D0;&#x3068;&#x3059;&#x308B;&#x5834;&#x5408;&#x306B;&#x306F;&#xFF0C;&#x7A7A;&#x304D;&#x9818;&#x57DF;&#x3092;&#x78BA;&#x4FDD;&#x3059;&#x308B;&#x3068;&#x826F;&#x3044;
+&#x305D;&#x306E;&#x305F;&#x3081;&#x306B;&#x306F;&#xFF0C;&#x4E00;&#x65E6;&#x4EEE;&#x306E;&#x9818;&#x57DF;&#x3092;&#x78BA;&#x4FDD;&#x3057;&#x3066;&#x304B;&#x3089;&#x6B21;&#x306E;&#x9818;&#x57DF;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x3066;&#x304B;&#x3089;&#xFF0C;&#x305D;&#x306E;&#x524D;&#x306E;&#x9818;&#x57DF;&#x3092;&#x958B;&#x653E;&#x3059;&#x308C;&#x3070;&#x826F;&#x3044;</p>
+<hr>
+<h3 id="ubuntu&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x6642;&#x306E;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;">Ubuntu&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x6642;&#x306E;&#x30D1;&#x30FC;&#x30C6;&#x30A3;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x8A2D;&#x5B9A;</h3>
+<p>Ubuntu&#x306E;&#x30DE;&#x30A6;&#x30F3;&#x30C8;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x306F;&#x30D7;&#x30EB;&#x30C0;&#x30A6;&#x30F3;&#x30E1;&#x30CB;&#x30E5;&#x30FC;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x304C;&#xFF0C;&#x305D;&#x3053;&#x306B;<code>/swap</code>&#x306F;&#x306A;&#x304F;&#xFF0C;&#x305D;&#x306E;&#x56DE;&#x7B54;&#x3068;&#x3057;&#x3066;&#x306F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x3068;&#x3057;&#x3066;<code>&#x30B9;&#x30EF;&#x30C3;&#x30D7;&#x9818;&#x57DF;</code>&#x3092;&#x9078;&#x629E;&#x3059;&#x308B;&#x3053;&#x3068;</p>
+<p>&#x9069;&#x5F53;&#x306B;&#x8003;&#x3048;&#x305F;&#x69CB;&#x6210;&#x4F8B;</p>
 <ul>
-<li>workspace&#x306E;&#x4ED5;&#x69D8;&#x3092;mac&#x98A8;&#x306B;(&#x5916;&#x90E8;display&#x3068;&#x7D50;&#x5408;&#x3057;&#x305F;&#x753B;&#x9762;&#x304C;&#x8907;&#x6570;&#x306B;&#x306A;&#x3063;&#x3066;&#x3057;&#x307E;&#x3063;&#x3066;&#x3044;&#x308B;)</li>
-<li>mac&#x3067;&#x306F;app launcher&#x306F;main display&#x306B;&#x7D71;&#x5408;&#x3057;&#x3066;&#x3044;&#x308B;&#x304C;&#xFF0C;ubuntu&#x3067;&#x306F;&#x72EC;&#x7ACB;(icon menu&#x3082;&#x540C;&#x69D8;)</li>
+<li><p>SSD</p>
+<ul>
+<li>/boot(ext4): 1024MB</li>
+<li>(swap):      8192MB</li>
+<li>/(ext4):     xxxMB</li>
 </ul>
-
+</li>
+<li><p>HDD(&#x30D7;&#x30E9;&#x30B0;&#x30A2;&#x30F3;&#x30C9;&#x30D7;&#x30EC;&#x30A4;&#x3067;&#x306F;&#x306A;&#x3044;&#x306E;&#x3067;&#xFF0C;&#x4E88;&#x3081;&#x8D77;&#x52D5;&#x3059;&#x308B;&#x524D;&#x306B;&#x53D6;&#x308A;&#x4ED8;&#x3051;&#x3066;&#x304A;&#x304F;&#x3053;&#x3068;)</p>
+<ul>
+<li>/home(ext4): xxxMB</li>
+</ul>
+</li>
+<li><p>&#x30D6;&#x30FC;&#x30C8;&#x30ED;&#x30FC;&#x30C0;&#x30FC;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;&#x30C7;&#x30D0;&#x30A4;&#x30B9;&#x3092;SSD&#x306B;&#x9078;&#x3093;&#x3067;&#x304A;&#x304F;</p>
+</li>
+</ul>
+<hr>
+<p>&#x306A;&#x304A;&#xFF0C;HDD&#x306B;<code>/home</code>&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#xFF0C;&#x305D;&#x308C;&#x3092;&#x5916;&#x3057;&#x3066;&#x8D77;&#x52D5;&#x3059;&#x308B;&#x3068;
+<code>Welecome to emergency mode!</code>&#x3068;&#x306A;&#x308B;
+&#x65E5;&#x672C;&#x8A9E;&#x306E;remix&#x306E;Ubuntu&#x306E;&#x5834;&#x5408;&#x306B;&#x306F;default&#x3067;
+<code>LANG=ja_JP.UTF-8</code>&#x3068;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#xFF0C;
+<code>export LANG=en_US.UTF-8</code>
+&#x3068;&#x3057;&#x3066;&#x304B;&#x3089;&#x64CD;&#x4F5C;&#x3059;&#x308B;&#x3068;&#x3088;&#x3044;
+&#x307E;&#x305F;&#xFF0C;&#x306A;&#x305C;&#x304B;&#x82F1;&#x8A9E;&#x30AD;&#x30FC;&#x30DC;&#x30FC;&#x30C9;&#x3067;&#x306E;&#x914D;&#x7F6E;&#x3067;&#x64CD;&#x4F5C;&#x3059;&#x308B;&#x3053;&#x3068;&#x306B;&#x306A;&#x3063;&#x305F;</p>
+<hr>
+<p>&#x306A;&#x304A;&#xFF0C;mac&#x3067;ext4&#x5F62;&#x5F0F;&#x306E;disk&#x3092;mount&#x3059;&#x308B;&#x306B;&#x306F;<code>ext4fuse</code>&#x304C;&#x5FC5;&#x8981;&#x3068;&#x306A;&#x308B;</p>
+<pre><code>$ brew cask install osxfuse
+$ brew install ext4fuse
+</code></pre><p><a href="https://github.com/osxfuse/osxfuse/issues/340" target="_blank">Unable to mount ext4 disk &#xB7; Issue #340 &#xB7; osxfuse/osxfuse</a></p>
+<pre><code># see `diskutil list` IDENTIFIER item which TYPE is `Linux`
+sudo ext4fuse /dev/disk2s5 /Volumes/ext4_UNTITLED -o allow_other
+</code></pre>
                                 
                                 </section>
                             
@@ -562,8 +603,12 @@
 
             
                 
+                <a href="dual-display.html" class="navigation navigation-prev " aria-label="Previous page: Dual Display">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="partition.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Partition">
+                
+                <a href="SUID-SGID-sticky-bit.html" class="navigation navigation-next " aria-label="Next page: SUID SGID Sticky Bit">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -574,7 +619,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Dual Display","level":"1.6.1.1","depth":3,"next":{"title":"Partition","level":"1.6.1.2","depth":3,"path":"os/Ubuntu/partition.md","ref":"os/Ubuntu/partition.md","articles":[]},"previous":{"title":"Ubuntu","level":"1.6.1","depth":2,"ref":"","articles":[{"title":"Dual Display","level":"1.6.1.1","depth":3,"path":"os/Ubuntu/dual-display.md","ref":"os/Ubuntu/dual-display.md","articles":[]},{"title":"Partition","level":"1.6.1.2","depth":3,"path":"os/Ubuntu/partition.md","ref":"os/Ubuntu/partition.md","articles":[]},{"title":"SUID SGID Sticky Bit","level":"1.6.1.3","depth":3,"path":"os/Ubuntu/SUID-SGID-sticky-bit.md","ref":"os/Ubuntu/SUID-SGID-sticky-bit.md","articles":[]},{"title":"ubuntu-ja-16.04-desktop-amd64.iso init setup","level":"1.6.1.4","depth":3,"path":"os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.md","ref":"os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"os/Ubuntu/dual-display.md","mtime":"2018-06-10T10:22:29.631Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-29T08:30:22.464Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Partition","level":"1.6.1.2","depth":3,"next":{"title":"SUID SGID Sticky Bit","level":"1.6.1.3","depth":3,"path":"os/Ubuntu/SUID-SGID-sticky-bit.md","ref":"os/Ubuntu/SUID-SGID-sticky-bit.md","articles":[]},"previous":{"title":"Dual Display","level":"1.6.1.1","depth":3,"path":"os/Ubuntu/dual-display.md","ref":"os/Ubuntu/dual-display.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"os/Ubuntu/partition.md","mtime":"2018-09-29T07:25:47.209Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-29T08:30:22.464Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
