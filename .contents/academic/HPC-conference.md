@@ -427,7 +427,11 @@ SIGMOD, VLDB, ICDE が三大「トップカンファレンス」
 
 
 # プログラミング言語
-# PLDI
+## TOPLAS
+プログラミング言語の最高峰ジャーナル
+[ACM TOPLAS]( https://toplas.acm.org/ )
+
+## PLDI
 [Programming Language Design and Implementation (PLDI)]( http://www.sigplan.org/Conferences/PLDI/ )
 
 [PLDI 2016]( http://conf.researchr.org/home/pldi-2016 )
@@ -439,7 +443,12 @@ e.g.
 * ISMM : メモリ管理
 * Tutorials : 言語処理系、解析機、デバッガなどの最新ツールの紹介
 
-[SIGPLAN]( http://www.sigplan.org/ )
+* [PLDI2014/ISMM2014 参加報告]( https://www.jstage.jst.go.jp/article/jssst/31/4/31_4_30/_pdf )
+* [PLDI2015 参加報告]( https://ipsj.ixsq.nii.ac.jp/ej/?action=repository_uri&item_id=144990&file_id=1&file_no=1 )
+* [PLDI2016 参加報告]( https://ipsj.ixsq.nii.ac.jp/ej/?action=repository_uri&item_id=174922&file_id=1&file_no=1 )
+* [PLDI2018/ISMM2018 参加報告]( https://www.jstage.jst.go.jp/article/jssst/35/4/35_93/_pdf/-char/en )
+
+## [SIGPLAN]( http://www.sigplan.org/ )
 
 このグループのプログラミング言語のトップ国際会議
 POPL, ICFP, OOPSLA
@@ -469,6 +478,17 @@ Code Generation and Optimization (CGO)
 Software Language Engineering (SLE)
 Programming Languages Mentoring Workshop
 ```
+
+### SPLASH
+[SPLASH 2019]( https://2019.splashcon.org/ )
+
+OOPSLA(top conferece)を同時に開催する(日本語wikiもある)
+
+[OOPSLA \- Wikipedia]( https://ja.wikipedia.org/wiki/OOPSLA )
+
+> SPLASH includes the following co-located conferences: OOPSLA, Onward!, GPCE, SLE, DLS, and MPLR; as well as a large array of workshops and events.
+
+[ACM SPLASH2016 参加報告]( https://www.jstage.jst.go.jp/article/jssst/34/3/34_3_86/_pdf )
 
 # 情報検索
 # SIGIR
