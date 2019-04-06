@@ -1,5 +1,7 @@
 # Your Book Title
 
+- Academic
+  * [HPC Conference](academic/HPC-conference.md)
 - Clang
   - Libtooling
     * [Clang Libtooling Tutorial](clang/libtooling/clang-libtooling tutorial.md)
@@ -18,5 +20,8 @@
 - Shell
   * [Array](shell/array.md)
   * [Cmd](shell/cmd.md)
+  * [Coding Rule](shell/coding_rule.md)
+  * [Ln](shell/ln.md)
+  * [Ssh](shell/ssh.md)
 - Terminal
   * [Terminator](terminal/terminator.md)
