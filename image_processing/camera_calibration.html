@@ -1,0 +1,800 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Camera Calibration · GitBook</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="">
+    <meta name="generator" content="GitBook 3.2.3">   
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+      
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">   
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">   
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">   
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+ 
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
+    <script>
+        var initPrettyPrint = function() {
+            Array.prototype.slice.call(document.querySelectorAll("body pre")).forEach(function(pre) {
+                pre.setAttribute("class", "prettyprint");
+            });
+            PR.prettyPrint();
+        };
+        window.addEventListener("load", initPrettyPrint, false);
+    </script>
+</head>
+
+<body>
+    
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Academic
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../academic/HPC-conference.html">
+            
+                <a href="../academic/HPC-conference.html">
+            
+                    
+                    HPC Conference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Clang
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    Libtooling
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../clang/libtooling/clang-libtooling tutorial.html">
+            
+                <a href="../clang/libtooling/clang-libtooling tutorial.html">
+            
+                    
+                    Clang Libtooling Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Font
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../font/monaco.html">
+            
+                <a href="../font/monaco.html">
+            
+                    
+                    Monaco
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    github.io
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../github.io/how-to-start.html">
+            
+                <a href="../github.io/how-to-start.html">
+            
+                    
+                    How To Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Image Processing
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="camera_calibration.html">
+            
+                <a href="camera_calibration.html">
+            
+                    
+                    Camera Calibration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Os
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    Ubuntu
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../os/Ubuntu/dual-display.html">
+            
+                <a href="../os/Ubuntu/dual-display.html">
+            
+                    
+                    Dual Display
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../os/Ubuntu/partition.html">
+            
+                <a href="../os/Ubuntu/partition.html">
+            
+                    
+                    Partition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../os/Ubuntu/SUID-SGID-sticky-bit.html">
+            
+                <a href="../os/Ubuntu/SUID-SGID-sticky-bit.html">
+            
+                    
+                    SUID SGID Sticky Bit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.html">
+            
+                <a href="../os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.html">
+            
+                    
+                    ubuntu-ja-16.04-desktop-amd64.iso init setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../python/tips.html">
+            
+                <a href="../python/tips.html">
+            
+                    
+                    Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    Shell
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../shell/array.html">
+            
+                <a href="../shell/array.html">
+            
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../shell/cmd.html">
+            
+                <a href="../shell/cmd.html">
+            
+                    
+                    Cmd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../shell/coding_rule.html">
+            
+                <a href="../shell/coding_rule.html">
+            
+                    
+                    Coding Rule
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../shell/ln.html">
+            
+                <a href="../shell/ln.html">
+            
+                    
+                    Ln
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../shell/ssh.html">
+            
+                <a href="../shell/ssh.html">
+            
+                    
+                    Ssh
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Terminal
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../terminal/terminator.html">
+            
+                <a href="../terminal/terminator.html">
+            
+                    
+                    Terminator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Camera Calibration</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="camera-calibration">camera calibration</h1>
+<ul>
+<li><a href="https://jp.mathworks.com/help/vision/ug/camera-calibration.html" target="_blank">&#x30AB;&#x30E1;&#x30E9; &#x30AD;&#x30E3;&#x30EA;&#x30D6;&#x30EC;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3068;&#x306F; - MATLAB &amp; Simulink - MathWorks &#x65E5;&#x672C;</a><ul>
+<li>&#x3068;&#x3066;&#x3082;&#x308F;&#x304B;&#x308A;&#x3084;&#x3059;&#x3044;</li>
+</ul>
+</li>
+<li><a href="https://qiita.com/ryokomy/items/fee2105c3e9bfccde3a3" target="_blank">&#x30AB;&#x30E1;&#x30E9;&#x306E;&#x5185;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3001;&#x5916;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3001;&#x6B6A;&#x307F;&#x3001;&#x5FA9;&#x7FD2;&#x7528; - Qiita</a></li>
+<li><a href="https://www.slideshare.net/TakuyaMizoguchi/ss-65111488" target="_blank">&#x30AB;&#x30E1;&#x30E9;&#x30AD;&#x30E3;&#x30EA;&#x30D6;&#x30EC;&#x30FC;&#x30B7;&#x30E7;&#x30F3;</a></li>
+<li><a href="http://labs.eecs.tottori-u.ac.jp/sd/Member/oyamada/OpenCV/html/py_tutorials/py_calib3d/py_calibration/py_calibration.html" target="_blank">&#x30AB;&#x30E1;&#x30E9;&#x30AD;&#x30E3;&#x30EA;&#x30D6;&#x30EC;&#x30FC;&#x30B7;&#x30E7;&#x30F3; &#x2014; OpenCV-Python Tutorials 1 documentation</a></li>
+<li><a href="http://opencv.jp/opencv-2svn/cpp/camera_calibration_and_3d_reconstruction.html" target="_blank">&#x30AB;&#x30E1;&#x30E9;&#x30AD;&#x30E3;&#x30EA;&#x30D6;&#x30EC;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3068;3&#x6B21;&#x5143;&#x518D;&#x69CB;&#x6210; &#x2014; opencv 2.2 documentation</a></li>
+</ul>
+<h2 id="&#x30AB;&#x30E1;&#x30E9;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;">&#x30AB;&#x30E1;&#x30E9;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;</h2>
+<ul>
+<li>&#x30AB;&#x30E1;&#x30E9;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x306F;1.&#x5185;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3068;2.&#x5916;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#xFF0C;3.&#x6B6A;&#x307F;&#x4FC2;&#x6570;&#x306B;&#x3088;&#x3063;&#x3066;&#x69CB;&#x6210;&#x3055;&#x308C;&#x308B;</li>
+<li>OpenCV&#x306E;&#x30AB;&#x30E1;&#x30E9;&#x30AD;&#x30E3;&#x30EA;&#x30D6;&#x30EC;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306F;&#xFF0C;Z.Zhang&#x306E;&#x624B;&#x6CD5;&#x3092;&#x57FA;&#x306B;&#x5B9F;&#x88C5;<ul>
+<li>&quot;A flexible new technique for camera calibration&quot;. IEEE Transactions on Pattern Analysis and Machine Intelligence, 22(11):1330-1334, 2000.</li>
+</ul>
+</li>
+</ul>
+<h3 id="1&#x5185;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;intrinsic-parameters">1.&#x5185;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;(intrinsic parameters)</h3>
+<ul>
+<li><p>&#x30AB;&#x30E1;&#x30E9;&#x884C;&#x5217;(&#x5185;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x884C;&#x5217;&#x3068;&#x3082;&#x547C;&#x3070;&#x308C;&#x308B;)</p>
+<ul>
+<li>3x3&#x884C;&#x5217;&#x3067;&#x8868;&#x73FE;&#x3055;&#x308C;&#x308B;(opencv)</li>
+<li>&#x7126;&#x70B9;&#x8DDD;&#x96E2;(fx,fy)</li>
+<li>&#x5149;&#x5B66;&#x4E2D;&#x5FC3;(&#x4E3B;&#x70B9;)(cx,cy)</li>
+<li>&#x30D4;&#x30AF;&#x30BB;&#x30EB;&#x305B;&#x3093;&#x65AD;(skew)(s=0&#x3068;&#x3059;&#x308B;&#x5834;&#x5408;&#x304C;&#x591A;&#x3044;&#x3089;&#x3057;&#x3044;)</li>
+<li>3&#x6B21;&#x5143;&#x4E16;&#x754C;&#x306E;&#x30B7;&#x30FC;&#x30F3;&#x3092;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x5E73;&#x9762;(2D)&#x306B;&#x30DE;&#x30C3;&#x30D4;&#x30F3;&#x30B0;&#x3059;&#x308B;</li>
+</ul>
+</li>
+<li><p>4&#x884C;3&#x5217;(&#x5EA7;&#x6A19;&#x8868;&#x73FE;&#x306F;&#x884C;&#x30D9;&#x30AF;&#x30C8;&#x30EB;&#x306E;&#x5834;&#x5408;)(matlab&#x306E;&#x5834;&#x5408;&#x306B;&#x306F;camera matrix=&#x5916;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x884C;&#x5217;xopencv&#x306E;&#x30AB;&#x30E1;&#x30E9;&#x884C;&#x5217;&#x3068;&#x3057;&#x3066;&#x3044;&#x308B;)</p>
+</li>
+<li><p>&#x30AB;&#x30E1;&#x30E9;&#x306E;&#x5916;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x30FC;&#x3068;&#x5185;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x4F7F;&#x7528;&#x3057;&#x3066;&#x30AB;&#x30E1;&#x30E9;&#x884C;&#x5217;&#x3092;&#x8A08;&#x7B97;&#x3059;&#x308B;</p>
+<ul>
+<li>&#x5916;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x30FC;&#x306F; 3 &#x6B21;&#x5143;&#x30B7;&#x30FC;&#x30F3;&#x306B;&#x304A;&#x3051;&#x308B;&#x30AB;&#x30E1;&#x30E9;&#x306E;&#x4F4D;&#x7F6E;&#x3092;&#x8868;&#x3059;</li>
+<li>&#x5185;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x30FC;&#x306F;&#x30AB;&#x30E1;&#x30E9;&#x306E;&#x5149;&#x5B66;&#x7684;&#x4E2D;&#x5FC3;&#x3068;&#x7126;&#x70B9;&#x8DDD;&#x96E2;&#x3092;&#x8868;&#x3059;</li>
+<li>&#x30EF;&#x30FC;&#x30EB;&#x30C9;&#x5EA7;&#x6A19;&#x70B9;&#x306F;&#x5916;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x30AB;&#x30E1;&#x30E9;&#x5EA7;&#x6A19;&#x306B;&#x5909;&#x63DB;&#x3055;&#x308C;&#xFF0C;&#x30AB;&#x30E1;&#x30E9;&#x5EA7;&#x6A19;&#x306F;&#x5185;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x30FC;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x5E73;&#x9762;&#x306B;&#x30DE;&#x30C3;&#x30D4;&#x30F3;&#x30B0;&#x3055;&#x308C;&#x308B;&#x3002;</li>
+</ul>
+</li>
+<li><p>&#x753B;&#x7D20;&#x306E;&#x30B9;&#x30B1;&#x30FC;&#x30EA;&#x30F3;&#x30B0;&#x30D5;&#x30A1;&#x30AF;&#x30BF;&#x30FC;</p>
+</li>
+<li>&#x30EC;&#x30F3;&#x30BA;&#x6B6A;&#x4FC2;&#x6570;(&#x534A;&#x5F84;&#x65B9;&#x5411;&#x6B6A;&#x307F;&#x4FC2;&#x6570; k1&#x3001;k2&#x3001;k3, ... &#x3068; &#x63A5;&#x7DDA;&#x65B9;&#x5411;&#x6B6A;&#x307F;&#x4FC2;&#x6570; p1&#x3001;p2&#x304B;&#x3089;&#x306A;&#x308B;&#x3002;)<ul>
+<li>&#x9AD8;&#x6B21;&#x306E;&#x4FC2;&#x6570;&#x306F;&#x5FC5;&#x305A;&#x3057;&#x3082;&#x8003;&#x616E;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x306F;&#x306A;&#x3044;</li>
+</ul>
+</li>
+</ul>
+<h3 id="2&#x5916;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;extrinsic-parameters">2.&#x5916;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;(extrinsic parameters)</h3>
+<ul>
+<li><a href="https://mem-archive.com/2018/02/17/post-74/" target="_blank">&#x30AB;&#x30E1;&#x30E9;&#x5916;&#x90E8;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3068;&#x306F; | NO MORE! &#x8ECA;&#x8F2A;&#x306E;&#x518D;&#x767A;&#x660E;</a></li>
+<li>&#x5BFE;&#x8C61;&#x7269;&#x3092;&#x56FA;&#x5B9A;&#x3057;&#x305F;&#x5834;&#x5408;&#x306E;&#x76F8;&#x5BFE;&#x7684;&#x306A;&#x4F4D;&#x7F6E;&#x95A2;&#x4FC2;<ul>
+<li>&#x56DE;&#x8EE2;&#x30D9;&#x30AF;&#x30C8;&#x30EB;&#xFF1A;<ul>
+<li>&#x30EF;&#x30FC;&#x30EB;&#x30C9;&#x5EA7;&#x6A19;&#x306B;&#x304A;&#x3051;&#x308B;&#x30AB;&#x30E1;&#x30E9;&#x306E;&#x5411;&#x304D;&#x3002;( 3 &#xD7; 3 )</li>
+</ul>
+</li>
+<li>&#x4E26;&#x9032;&#x30D9;&#x30AF;&#x30C8;&#x30EB;&#xFF1A;<ul>
+<li>&#x30EF;&#x30FC;&#x30EB;&#x30C9;&#x5EA7;&#x6A19;&#x306B;&#x304A;&#x3051;&#x308B;&#x30AB;&#x30E1;&#x30E9;&#x306E;&#x4F4D;&#x7F6E;&#x3002;( 3 )</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x30AB;&#x30E1;&#x30E9;&#x306E;&#x5EA7;&#x6A19;&#x7CFB;&#x306E;&#x539F;&#x70B9;&#x306F;&#x5149;&#x5B66;&#x7684;&#x4E2D;&#x5FC3;<ul>
+<li>&#x57FA;&#x672C;&#x7684;&#x306B;<ul>
+<li>x&#x8EF8;&#x3068;y&#x8EF8;&#x3067;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x5E73;&#x9762;(&#x5DE6;&#x4E0A;&#x304C;&#x539F;&#x70B9;&#x3067;&#xFF0C;&#x53F3;(x+)&#xFF0C;&#x4E0B;(y+))</li>
+<li>z&#x8EF8;&#x306F;&#x30AB;&#x30E1;&#x30E9;&#x306E;&#x5411;&#x3044;&#x3066;&#x3044;&#x308B;&#x65B9;&#x5411;&#x3092;+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>4&#x884C;3&#x5217;(&#x5EA7;&#x6A19;&#x8868;&#x73FE;&#x306F;&#x884C;&#x30D9;&#x30AF;&#x30C8;&#x30EB;&#x306E;&#x5834;&#x5408;)<ul>
+<li>&#x5834;&#x5408;&#x306B;&#x3088;&#x3063;&#x3066;&#x306F;&#xFF0C;4x4&#x3084;3x4&#x3067;&#x8868;&#x73FE;&#x3055;&#x308C;&#x308B;</li>
+<li>&#x540C;&#x6B21;&#x5EA7;&#x6A19;&#x306E;&#x884C;&#x3078;&#x306E;&#x8FFD;&#x52A0;?&#x306B;&#x3088;&#x308A;&#xFF0C;&#x5E73;&#x884C;&#x79FB;&#x52D5;&#x3092;&#x8868;&#x73FE;?(&#x5EA7;&#x6A19;&#x8868;&#x73FE;&#x306F;&#x884C;&#x30D9;&#x30AF;&#x30C8;&#x30EB;&#x306E;&#x5834;&#x5408;)</li>
+</ul>
+</li>
+</ul>
+<h3 id="3&#x6B6A;&#x307F;&#x4FC2;&#x6570;&#x6B6A;&#x53CE;&#x4FC2;&#x6570;distortion-coefficients">3.&#x6B6A;&#x307F;&#x4FC2;&#x6570;(&#x6B6A;&#x53CE;&#x4FC2;&#x6570;)(distortion coefficients)</h3>
+<ul>
+<li>k1,k2,p1,p2</li>
+</ul>
+<h2 id="&#x7528;&#x8A9E;">&#x7528;&#x8A9E;</h2>
+<h3 id="&#x5EA7;&#x6A19;&#x5909;&#x63DB;">&#x5EA7;&#x6A19;&#x5909;&#x63DB;</h3>
+<ul>
+<li><a href="https://web.wakayama-u.ac.jp/~tokoi/lecture/gg/ggbook03.pdf" target="_blank">&#x7B2C;7&#x7AE0; &#x5EA7;&#x6A19;&#x5909;&#x63DB;</a></li>
+<li><p><a href="ftp://ftp.oreilly.co.jp/9784873113777/g3d_sample02.pdf" target="_blank">7&#x7AE0; &#x884C;&#x5217;&#x3068;&#x7DDA;&#x578B;&#x5909;&#x63DB;</a></p>
+<ul>
+<li>WARN: pdf by ftp protocol</li>
+</ul>
+</li>
+<li><p>&#x5EA7;&#x6A19;&#x5909;&#x63DB;&#x306E;&#x7A2E;&#x985E;</p>
+<ul>
+<li>&#x7DDA;&#x578B;&#x5909;&#x63DB;(&#x4E00;&#x6B21;&#x5909;&#x63DB;)</li>
+<li>&#x30A2;&#x30D5;&#x30A3;&#x30F3;&#x5909;&#x63DB;</li>
+<li>&#x53EF;&#x9006;&#x5909;&#x63DB;</li>
+<li>&#x89D2;&#x5EA6;&#x4FDD;&#x5B58;&#x5909;&#x63DB;</li>
+<li>&#x76F4;&#x4EA4;&#x5909;&#x63DB;</li>
+<li>&#x525B;&#x4F53;&#x5909;&#x63DB;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x7DDA;&#x578B;&#x5909;&#x63DB;">&#x7DDA;&#x578B;&#x5909;&#x63DB;</h3>
+<ul>
+<li>e.g. &#x6B63;&#x65B9;&#x884C;&#x5217;(square matrix)(&#x884C;&#x8981;&#x7D20;&#x306E;&#x6570;&#x3068;&#x5217;&#x8981;&#x7D20;&#x306E;&#x6570;&#x304C;&#x4E00;&#x81F4;&#x3059;&#x308B;&#x884C;&#x5217;)&#x306F;&#x7DDA;&#x5F62;&#x5909;&#x63DB;</li>
+</ul>
+<h3 id="&#x30A2;&#x30D5;&#x30A3;&#x30F3;&#x5909;&#x63DB;">&#x30A2;&#x30D5;&#x30A3;&#x30F3;&#x5909;&#x63DB;</h3>
+<ul>
+<li>&#x7DDA;&#x578B;&#x5909;&#x63DB; + &#x5E73;&#x884C;&#x79FB;&#x52D5;<ul>
+<li>&#x3064;&#x307E;&#x308A;&#xFF0C;&#x7DDA;&#x578B;&#x5909;&#x63DB;&#x2208;&#x30A2;&#x30D5;&#x30A3;&#x30F3;&#x5909;&#x63DB;</li>
+</ul>
+</li>
+<li>&#x540C;&#x6B21;&#x5EA7;&#x6A19;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x8868;&#x3055;&#x308C;&#x308B;</li>
+</ul>
+<h3 id="&#x53EF;&#x9006;&#x5909;&#x63DB;">&#x53EF;&#x9006;&#x5909;&#x63DB;</h3>
+<ul>
+<li>&#x57FA;&#x672C;&#x7684;&#x306B;&#xFF0C;&#x6295;&#x5F71;&#x4EE5;&#x5916;&#x306E;&#x5EA7;&#x6A19;&#x5909;&#x63DB;&#x306F;&#x53EF;&#x9006;<ul>
+<li>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x304C;&#x6295;&#x5F71;&#x3055;&#x308C;&#x308B;&#x3068;&#xFF0C;1&#x6B21;&#x5143;&#x5206;&#x306E;&#x60C5;&#x5831;&#x3092;&#x7834;&#x68C4;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#xFF0C;&#x660E;&#x3089;&#x304B;&#x306B;&#x4E0D;&#x53EF;&#x9006;</li>
+</ul>
+</li>
+<li>&#x9006;&#x884C;&#x5217;&#x3092;&#x6301;&#x305F;&#x306A;&#x3044;&#x884C;&#x5217;&#x306B;&#x3088;&#x308B;&#x5909;&#x63DB;&#x306F;&#x4E0D;&#x53EF;&#x9006;</li>
+</ul>
+<h3 id="&#x89D2;&#x5EA6;&#x4FDD;&#x5B58;&#x5909;&#x63DB;">&#x89D2;&#x5EA6;&#x4FDD;&#x5B58;&#x5909;&#x63DB;</h3>
+<ul>
+<li>&#x5E73;&#x884C;&#x79FB;&#x52D5;/&#x56DE;&#x8EE2;/&#x5747;&#x7B49;&#x30B9;&#x30B1;&#x30FC;&#x30EA;&#x30F3;&#x30B0;&#x306E;&#x307F;</li>
+<li>&#x3059;&#x3079;&#x3066;&#x306E;&#x89D2;&#x5EA6;&#x4FDD;&#x5B58;&#x5909;&#x63DB;&#x2208;&#x30A2;&#x30D5;&#x30A3;&#x30F3;&#x5909;&#x63DB;</li>
+<li>&#x3059;&#x3079;&#x3066;&#x306E;&#x89D2;&#x5EA6;&#x4FDD;&#x5B58;&#x5909;&#x63DB;&#x2208;&#x53EF;&#x9006;&#x5909;&#x63DB;</li>
+</ul>
+<h3 id="&#x76F4;&#x4EA4;&#x5909;&#x63DB;">&#x76F4;&#x4EA4;&#x5909;&#x63DB;</h3>
+<ul>
+<li>&#x5E73;&#x884C;&#x79FB;&#x52D5;/&#x56DE;&#x8EE2;/&#x30EA;&#x30D5;&#x30EC;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x307F;</li>
+<li>&#x3059;&#x3079;&#x3066;&#x306E;&#x76F4;&#x884C;&#x5909;&#x63DB;&#x2208;&#x30A2;&#x30D5;&#x30A3;&#x30F3;&#x5909;&#x63DB;</li>
+<li>&#x3059;&#x3079;&#x3066;&#x306E;&#x76F4;&#x884C;&#x5909;&#x63DB;&#x2208;&#x53EF;&#x9006;&#x5909;&#x63DB;</li>
+<li>&#x9577;&#x3055;/&#x89D2;&#x5EA6;/&#x9762;&#x7A4D;/&#x4F53;&#x7A4D;&#x306F;&#x3059;&#x3079;&#x3066;&#x4FDD;&#x6301;&#x3055;&#x308C;&#x308B;</li>
+</ul>
+<h4 id="&#x525B;&#x4F53;&#x5909;&#x63DB;">&#x525B;&#x4F53;&#x5909;&#x63DB;</h4>
+<p><a href="https://jp.mathworks.com/help/images/ref/affine2d.isrigid.html" target="_blank">&#x5909;&#x63DB;&#x304C;&#x525B;&#x4F53;&#x5909;&#x63DB;&#x304B;&#x3069;&#x3046;&#x304B;&#x306E;&#x5224;&#x5225; - MATLAB isRigid - MathWorks &#x65E5;&#x672C;</a></p>
+<blockquote>
+<p>&#x525B;&#x4F53;&#x5909;&#x63DB;&#x306B;&#x306F;&#x3001;&#x56DE;&#x8EE2;&#x3068;&#x5E73;&#x884C;&#x79FB;&#x52D5;&#x306E;&#x307F;&#x304C;&#x542B;&#x307E;&#x308C;&#x307E;&#x3059;&#x3002;&#x93E1;&#x6620;&#x3092;&#x542B;&#x307E;&#x305A;&#x3001;&#x5165;&#x529B;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30B5;&#x30A4;&#x30BA;&#x3084;&#x5F62;&#x72B6;&#x3092;&#x5909;&#x66F4;&#x3057;&#x307E;&#x305B;&#x3093;&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x5358;&#x7D14;&#x306A;&#x4F8B;&#x3067;&#x8003;&#x3048;&#x308B;&#x3068;&#xFF0C;&#x73FE;&#x5B9F;&#x306B;&#x3042;&#x308B;&#x7269;&#x4F53;(&#x525B;&#x4F53;)&#x3092;&#x4EBA;&#x306E;&#x624B;&#x3067;&#x52D5;&#x304B;&#x3059;&#x79FB;&#x52D5;&#x306F;&#x3059;&#x3079;&#x3066;&#x525B;&#x4F53;&#x5909;&#x63DB;&#x306A;&#x306E;&#x3067;&#x306F;?</li>
+<li>&#x5F62;&#x304C;&#x5909;&#x5316;&#x3057;&#x306A;&#x3044;&#x30A2;&#x30D5;&#x30A3;&#x30F3;&#x5909;&#x63DB;</li>
+<li>&#x9577;&#x3055;/&#x89D2;&#x5EA6;/&#x9762;&#x7A4D;/&#x4F53;&#x7A4D;&#x306F;&#x3059;&#x3079;&#x3066;&#x4FDD;&#x6301;&#x3055;&#x308C;&#x308B;</li>
+<li>&#x5E73;&#x884C;&#x79FB;&#x52D5;&#x30FB;&#x56DE;&#x8EE2;&#x306E;&#x307F;</li>
+<li>&#x3059;&#x3079;&#x3066;&#x306E;&#x525B;&#x4F53;&#x5909;&#x63DB;&#x2208;&#x76F4;&#x884C;&#x5909;&#x63DB;</li>
+<li>&#x3059;&#x3079;&#x3066;&#x306E;&#x525B;&#x4F53;&#x5909;&#x63DB;&#x2208;&#x89D2;&#x5EA6;&#x4FDD;&#x5B58;&#x5909;&#x63DB;</li>
+<li>&#x3059;&#x3079;&#x3066;&#x306E;&#x525B;&#x4F53;&#x5909;&#x63DB;&#x2208;&#x53EF;&#x9006;&#x5909;&#x63DB;</li>
+<li>&#x3059;&#x3079;&#x3066;&#x306E;&#x525B;&#x4F53;&#x5909;&#x63DB;&#x2208;&#x30A2;&#x30D5;&#x30A3;&#x30F3;&#x5909;&#x63DB;</li>
+<li>&#x525B;&#x4F53;&#x5909;&#x63DB;&#x306F;&#x56FA;&#x6709;&#x5909;&#x63DB;&#x3068;&#x3057;&#x3066;&#x77E5;&#x3089;&#x308C;&#x308B;</li>
+<li>&#x56DE;&#x8EE2;&#x884C;&#x5217;&#x306E;&#x884C;&#x5217;&#x5F0F;&#x306F;<code>1</code></li>
+</ul>
+<h3 id="&#x5EA7;&#x6A19;">&#x5EA7;&#x6A19;</h3>
+<h4 id="&#x540C;&#x6B21;&#x5EA7;&#x6A19;">&#x540C;&#x6B21;&#x5EA7;&#x6A19;</h4>
+<ul>
+<li><a href="http://wwwb.pikara.ne.jp/ogawa-giken/image_process/image_062.html" target="_blank">&#x540C;&#x6B21;&#x5EA7;&#x6A19;&#x7CFB;</a></li>
+<li><p><a href="http://www.eli.hokkai-s-u.ac.jp/~kikuchi/ma2/chap10a.html" target="_blank">&#x7B2C;10&#x56DE;&#x76EE;</a></p>
+</li>
+<li><p>&#x540C;&#x6B21;&#x5EA7;&#x6A19;&#x306F;&#x8868;&#x73FE;&#x3057;&#x3088;&#x3046;&#x3068;&#x3059;&#x308B;&#x5EA7;&#x6A19;&#x3088;&#x308A;&#x3082;1&#x6B21;&#x5143;&#x5206;&#x591A;&#x3044;&#x5EA7;&#x6A19;</p>
+<ul>
+<li>&#x5B9F;&#x969B;&#x306E;&#x5EA7;&#x6A19;&#x5024;&#x306F;&#x65B0;&#x898F;&#x8FFD;&#x52A0;&#x3057;&#x305F;&#x8981;&#x7D20;&#x306E;&#x5024;&#x3092;<code>w</code>&#x3068;&#x3057;&#x305F;&#x3068;&#x304D;&#xFF0C;<code>x/w</code>,<code>y/w</code>,<code>z/w</code>&#x3068;&#x306A;&#x308B;</li>
+<li><code>w=0</code>&#x306E;&#x5834;&#x5408;&#x306B;&#x306F;&#x7279;&#x5B9A;&#x65B9;&#x5411;&#x306E;&#x7121;&#x9650;&#x9060;&#x70B9;&#x3092;&#x8868;&#x3059;(e.g. &#x5149;&#x6E90;&#x5EA7;&#x6A19;&#x306B;&#x4F7F;&#x308F;&#x308C;&#x308B;)</li>
+<li>&#x5E73;&#x884C;&#x79FB;&#x52D5;(&#x5217;+1)&#x3068;&#x30B9;&#x30B1;&#x30FC;&#x30EB;(&#x5217;+1, &#x884C;+1)&#x304C;&#x5B9F;&#x73FE;&#x3067;&#x304D;&#x308B;(&#x30A2;&#x30D5;&#x30A3;&#x30F3;&#x5909;&#x63DB;&#x304C;&#x53EF;&#x80FD;&#x3068;&#x306A;&#x308B;)<ul>
+<li>&#x4E0A;&#x8A18;&#x306F;&#xFF0C;&#x5EA7;&#x6A19;&#x304C;&#x5217;&#x30D9;&#x30AF;&#x30C8;&#x30EB;&#x306E;&#x5834;&#x5408;&#x3067;&#xFF0C;&#x884C;&#x30D9;&#x30AF;&#x30C8;&#x30EB;&#x8868;&#x73FE;&#x3067;&#x306F;&#x9006;&#x3068;&#x306A;&#x308B;</li>
+<li>&#x62E1;&#x5F35;&#x3057;&#x305F;&#x5EA7;&#x6A19;&#x8868;&#x73FE;&#x306E;&#x30D9;&#x30AF;&#x30C8;&#x30EB;&#x3068;&#x306F;&#x7570;&#x306A;&#x308B;&#x65B9;&#x5411;&#x306E;&#x5024;&#x306F;<code>0</code>&#x3068;&#x3059;&#x308B;&#x306E;&#x304C;&#x666E;&#x901A;?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Camera Calibration","level":"1.6.1","depth":2,"next":{"title":"Os","level":"1.7","depth":1,"ref":"","articles":[{"title":"Ubuntu","level":"1.7.1","depth":2,"ref":"","articles":[{"title":"Dual Display","level":"1.7.1.1","depth":3,"path":"os/Ubuntu/dual-display.md","ref":"os/Ubuntu/dual-display.md","articles":[]},{"title":"Partition","level":"1.7.1.2","depth":3,"path":"os/Ubuntu/partition.md","ref":"os/Ubuntu/partition.md","articles":[]},{"title":"SUID SGID Sticky Bit","level":"1.7.1.3","depth":3,"path":"os/Ubuntu/SUID-SGID-sticky-bit.md","ref":"os/Ubuntu/SUID-SGID-sticky-bit.md","articles":[]},{"title":"ubuntu-ja-16.04-desktop-amd64.iso init setup","level":"1.7.1.4","depth":3,"path":"os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.md","ref":"os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.md","articles":[]}]}]},"previous":{"title":"Image Processing","level":"1.6","depth":1,"ref":"","articles":[{"title":"Camera Calibration","level":"1.6.1","depth":2,"path":"image_processing/camera_calibration.md","ref":"image_processing/camera_calibration.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"image_processing/camera_calibration.md","mtime":"2019-04-07T10:17:44.402Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-07T10:18:20.644Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+ 
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+</body>
+
+</html>
+
