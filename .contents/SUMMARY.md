@@ -1,5 +1,8 @@
 # Your Book Title
 
+- Book
+  - Pc Parts
+    * [PCI Express](_book/pc_parts/PCI_Express.md)
 - Academic
   * [HPC Conference](academic/HPC-conference.md)
 - Clang
@@ -17,6 +20,8 @@
     * [Partition](os/Ubuntu/partition.md)
     * [SUID SGID Sticky Bit](os/Ubuntu/SUID-SGID-sticky-bit.md)
     * [ubuntu-ja-16.04-desktop-amd64.iso init setup](os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.md)
+- Pc Parts
+  * [PCI Express](pc_parts/PCI_Express.md)
 - Python
   * [Tips](python/tips.md)
 - Shell
