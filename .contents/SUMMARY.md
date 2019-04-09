@@ -1,8 +1,5 @@
 # Your Book Title
 
-- Book
-  - Pc Parts
-    * [PCI Express](_book/pc_parts/PCI_Express.md)
 - Academic
   * [HPC Conference](academic/HPC-conference.md)
 - Clang

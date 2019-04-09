@@ -7,6 +7,51 @@
 * [カメラキャリブレーション — OpenCV\-Python Tutorials 1 documentation]( http://labs.eecs.tottori-u.ac.jp/sd/Member/oyamada/OpenCV/html/py_tutorials/py_calib3d/py_calibration/py_calibration.html )
 * [カメラキャリブレーションと3次元再構成 — opencv 2\.2 documentation]( http://opencv.jp/opencv-2svn/cpp/camera_calibration_and_3d_reconstruction.html )
 
+----
+
+* [カメラ内部パラメータとは \| NO MORE\! 車輪の再発明]( https://mem-archive.com/2018/02/21/post-157/ )
+* [内部パラメータ\(焦点距離\)の単位の話 ～pixelとmmの変換～ \| NO MORE\! 車輪の再発明]( https://mem-archive.com/2018/02/25/post-201/ )
+* [OpenCV calibrateCamera関数のプロになる \- かみのメモ]( https://kamino.hatenablog.com/entry/opencv_calibrate_camera )
+
+[Camera Calibration and 3D Reconstruction — OpenCV 2\.4\.13\.7 documentation]( https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html )
+* cx, cy, fx,fy: pixel unit
+	* 基本的に，cx,cyは画像の中心座標となる(カメラの光軸(x軸)を通ってきた光が写り込むピクセルの座標(主点(principle point)))
+	* 基本的に，fx=fy(イメージセンサの精度による)
+* k=0のときは，no distortion
+	* 第一項は放射状歪み（radial distortion）
+	* 第二項・第三項は接線歪み（tangential distortion）
+	* 第四項・第五項は薄プリズム歪み（thin prism distortion）
+	* > 歪みパラメータの確認は難しいのですが、目安として絶対値が10を超えているときは疑ってかかったほうがよいでしょう。
+
+[Camera Calibration and 3D Reconstruction — OpenCV 2\.4\.13\.7 documentation]( https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html )
+* The distortion coefficients do not depend on the scene viewed. Thus, they also belong to the intrinsic camera parameters.
+* And they remain the same regardless of the captured image resolution. If, for example, a camera has been calibrated on images of 320 x 240 resolution, absolutely the same distortion coefficients can be used for 640 x 480 images from the same camera while f_x, f_y, c_x, and c_y need to be scaled appropriately.
+* kappa,piの値はどのサイズの画像でcalibされたかに依存するが，fx,fy,cx,cyは依存するので注意
+	* [opencv\.jp \- OpenCV\-1\.0:CV カメラキャリブレーション（Camera Calibration）リファレンス マニュアル \-]( http://opencv.jp/opencv-1.0.0/document/opencvref_cv_calibration.html )
+		* > もしある係数によってカメラ画像がアップサンプリングまたはダウンサンプリ ングされている場合，これらすべてのパラメータ(fx, fy, cx， cy)も同じ係数でスケーリング（それぞれが乗算/除算）されなければな らない．
+
+* [C\+\+ Opencv Calibration of the camera with different resolution \- Stack Overflow]( https://stackoverflow.com/questions/44888119/c-opencv-calibration-of-the-camera-with-different-resolution )
+	* x方向,y方向にたいして，それぞれ比例
+* パラメタの具体例(どの程度の値かどうかを把握するのに役立つ)
+> For 1280*480 Camera_Matrix ( 3*3 )
+> 4.1609688662292331e+02; 0.; 2.8905731584063523e+02; // fx 0  cx
+> 0.; 4.1454707445301574e+02; 2.3874261375252598e+02; // 0  fy cy
+> 0.; 0.; 1.;                                         // 0  0  1
+> Distortion_Coefficients ( 5*1 )
+> -3.6288473454524128e-01; 1.5078686499416877e-01; 5.7904052666320714e-04; 1.3434936135297517e-05; -3.1521081637626687e-02;
+
+* [opencv/stereo\_calib\.cpp at master · opencv/opencv]( https://github.com/opencv/opencv/blob/master/samples/cpp/stereo_calib.cpp )
+	* M1, M2: camera matrices
+	* D1, D2: distortion matrices
+
+## 可視化ツール
+* [Camera Distortion Simulator]( https://kamino410.github.io/cv-snippets/camera_distortion_simulator/ )
+	* おすすめ
+* [Dissecting the Camera Matrix, Part 3: The Intrinsic Matrix ←]( http://ksimek.github.io/2013/08/13/intrinsic/ )
+* [Dissecting the Camera Matrix, Part 2: The Extrinsic Matrix ←]( http://ksimek.github.io/2012/08/22/extrinsic/ )
+
+----
+
 ## カメラパラメータ
 * カメラパラメータは1.内部パラメータと2.外部パラメータ，3.歪み係数によって構成される
 * OpenCVのカメラキャリブレーションは，Z.Zhangの手法を基に実装
