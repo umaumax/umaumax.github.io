@@ -1,8 +1,5 @@
 # Your Book Title
 
-- Book
-  - Pc Parts
-    * [PC Ie NIC](_book/pc_parts/PCIe_NIC.md)
 - Academic
   * [HPC Conference](academic/HPC-conference.md)
 - Clang
