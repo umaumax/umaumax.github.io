@@ -1,5 +1,8 @@
 # Your Book Title
 
+- Book
+  - Pc Parts
+    * [PC Ie NIC](_book/pc_parts/PCIe_NIC.md)
 - Academic
   * [HPC Conference](academic/HPC-conference.md)
 - Clang
@@ -19,6 +22,7 @@
     * [ubuntu-ja-16.04-desktop-amd64.iso init setup](os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.md)
 - Pc Parts
   * [PCI Express](pc_parts/PCI_Express.md)
+  * [PC Ie NIC](pc_parts/PCIe_NIC.md)
 - Python
   * [Tips](python/tips.md)
 - Shell

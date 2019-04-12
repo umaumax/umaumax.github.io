@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <title>Ssh · GitBook</title>
+    <title>PC Ie NIC · GitBook</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="">
     <meta name="generator" content="GitBook 3.2.3">   
@@ -46,7 +46,7 @@
 
     
     
-    <link rel="prev" href="ln.html" />
+    <link rel="prev" href="PCI_Express.html" />
     
 
 
@@ -434,9 +434,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="../pc_parts/PCI_Express.html">
+        <li class="chapter " data-level="1.9.1" data-path="PCI_Express.html">
             
-                <a href="../pc_parts/PCI_Express.html">
+                <a href="PCI_Express.html">
             
                     
                     PCI Express
@@ -447,9 +447,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.2" data-path="../pc_parts/PCIe_NIC.html">
+        <li class="chapter active" data-level="1.9.2" data-path="PCIe_NIC.html">
             
-                <a href="../pc_parts/PCIe_NIC.html">
+                <a href="PCIe_NIC.html">
             
                     
                     PC Ie NIC
@@ -511,9 +511,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.1" data-path="array.html">
+        <li class="chapter " data-level="1.11.1" data-path="../shell/array.html">
             
-                <a href="array.html">
+                <a href="../shell/array.html">
             
                     
                     Array
@@ -524,9 +524,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2" data-path="cmd.html">
+        <li class="chapter " data-level="1.11.2" data-path="../shell/cmd.html">
             
-                <a href="cmd.html">
+                <a href="../shell/cmd.html">
             
                     
                     Cmd
@@ -537,9 +537,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.3" data-path="coding_rule.html">
+        <li class="chapter " data-level="1.11.3" data-path="../shell/coding_rule.html">
             
-                <a href="coding_rule.html">
+                <a href="../shell/coding_rule.html">
             
                     
                     Coding Rule
@@ -550,9 +550,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.4" data-path="ln.html">
+        <li class="chapter " data-level="1.11.4" data-path="../shell/ln.html">
             
-                <a href="ln.html">
+                <a href="../shell/ln.html">
             
                     
                     Ln
@@ -563,9 +563,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.11.5" data-path="ssh.html">
+        <li class="chapter " data-level="1.11.5" data-path="../shell/ssh.html">
             
-                <a href="ssh.html">
+                <a href="../shell/ssh.html">
             
                     
                     Ssh
@@ -643,7 +643,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Ssh</a>
+        <a href=".." >PC Ie NIC</a>
     </h1>
 </div>
 
@@ -658,16 +658,32 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="ssh">ssh</h1>
-<h2 id="init-setup-of-idrsa">init setup of id_rsa</h2>
-<pre><code>remote=&quot;&quot;
-id_rsa_name=&quot;xxx_id_rsa&quot;
-
-ssh-keygen -t rsa -f ~/.ssh/$id_rsa_name
-# chmod 600 ~/.ssh/$id_rsa_name
-ssh $remote &quot;mkdir -p ~/.ssh &amp;&amp; chmod 700 ~/.ssh&quot;
-scp ~/.ssh/$id_rsa_name.pub $remote:~/.ssh/
-ssh $remote &quot;cat ~/.ssh/$id_rsa_name.pub &gt;&gt; ~/.ssh/authorized_keys &amp;&amp; chmod 600 ~/.ssh/authorized_keys&quot;
+                                <h1 id="pcie-nic">PCIe NIC</h1>
+<h2 id="pcie&#x30AE;&#x30AC;&#x30D3;&#x30C3;&#x30C8;nic---&#x30ED;&#x30FC;&#x30D7;&#x30ED;&#x30D5;&#x30A1;&#x30A4;&#x30EB;--&#x30AE;&#x30AC;&#x30D3;&#x30C3;&#x30C8;&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x30AB;&#x30FC;&#x30C9;--startechcom-&#x65E5;&#x672C;"><a href="https://www.startech.com/jp/Networking-IO/Adapter-Cards/Low-Profile-PCIe-Gigabit-NIC~ST1000SPEX2L" target="_blank">PCIe&#x30AE;&#x30AC;&#x30D3;&#x30C3;&#x30C8;NIC - &#x30ED;&#x30FC;&#x30D7;&#x30ED;&#x30D5;&#x30A1;&#x30A4;&#x30EB; | &#x30AE;&#x30AC;&#x30D3;&#x30C3;&#x30C8;&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x30AB;&#x30FC;&#x30C9; | StarTech.com &#x65E5;&#x672C;</a></h2>
+<blockquote>
+<p>&#x3053;&#x306E;&#x30AE;&#x30AC;&#x30D3;&#x30C3;&#x30C8;NIC /&#x30B5;&#x30FC;&#x30D0;&#x30A2;&#x30C0;&#x30D7;&#x30BF;&#x306F;&#x3001;IEEE 802.3/u/ab&#x898F;&#x683C;&#x306B;&#x6E96;&#x62E0;&#x3057;&#x3001;9K&#x306E;&#x30B8;&#x30E3;&#x30F3;&#x30DC;&#x30D5;&#x30EC;&#x30FC;&#x30E0;&#x3001;VLAN&#x30BF;&#x30AE;&#x30F3;&#x30B0;&#x3001;Wake on LAN&#xFF08;WOL&#xFF09;&#x306B;&#x5BFE;&#x5FDC;&#x3057;&#x3066;&#x304A;&#x308A;&#x3001;&#x52B9;&#x679C;&#x7684;&#x306A;&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF; &#x30D1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30F3;&#x30B9;&#x3092;&#x63D0;&#x4F9B;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x9006;&#x306B;&#xFF0C;Wake on LAN&#xFF08;WOL&#xFF09;&#x306B;&#x5BFE;&#x5FDC;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;NIC&#x304C;&#x3042;&#x308B;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;?</li>
+</ul>
+<p>&#x3053;&#x306E;&#x5546;&#x54C1;&#x306F;&#x30ED;&#x30FC;&#x30D7;&#x30ED;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x5BFE;&#x5FDC;&#x3060;&#x3063;&#x305F;&#xFF0E;(&#x306F;&#x3058;&#x3081;&#x304B;&#x3089;&#xFF0C;&#x30B9;&#x30EA;&#x30E0;&#x30BF;&#x30A4;&#x30D7;&#x7528;&#x3067;&#x6A19;&#x6E96;&#x30B5;&#x30A4;&#x30BA;&#xFF08;&#x30ED;&#x30FC;&#x30A8;&#x30F3;&#x30C9;&#xFF09;&#x306E;&#x30D1;&#x30FC;&#x30C4;&#x3082;&#x4ED8;&#x5C5E;)</p>
+<p><a href="https://www.pc-master.jp/jisaku/lan-z.html" target="_blank">LAN&#x30DC;&#x30FC;&#x30C9;&#x306E;&#x5897;&#x8A2D;&#x3000;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x521D;&#x5FC3;&#x8005;&#x8B1B;&#x5EA7;</a></p>
+<blockquote>
+<p>&#x30ED;&#x30FC;&#x30D7;&#x30ED;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x5BFE;&#x5FDC;&#x3067;&#x306F;&#x3001;&#x30CD;&#x30B8;&#x3092;&#x4ED8;&#x3051;&#x66FF;&#x3048;&#x308B;&#x3053;&#x3068;&#x3067;&#x3001;&#x30B9;&#x30EA;&#x30E0;&#x30BF;&#x30A4;&#x30D7;&#x306E;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x306A;&#x3069;&#x3067;&#x5897;&#x8A2D;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+</blockquote>
+<ul>
+<li><a href="http://www.pasonisan.com/pc-gpu/02dgpu-lowprofile.html" target="_blank">&#x30ED;&#x30FC;&#x30FB;&#x30D7;&#x30ED;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x5BFE;&#x5FDC;&#x306E;&#x30B0;&#x30E9;&#x30D5;&#x30A3;&#x30C3;&#x30AF;&#x30AB;&#x30FC;&#x30C9;&#x3068;&#x306F;</a></li>
+<li><a href="https://www.ratocsystems.com/products/subpage/lowpro/index.html" target="_blank">Low Profile PCI&#x3063;&#x3066;&#x306A;&#x306B;&#xFF1F;</a></li>
+<li><a href="https://note.cman.jp/pci/low_profile/" target="_blank">Low Profile(&#x30ED;&#x30FC;&#x30D7;&#x30ED;&#x30D5;&#x30A1;&#x30A4;&#x30EB;) PCI &#x3068;&#x306F;&#xFF1F;</a></li>
+</ul>
+<p><a href="https://www.amazon.co.jp/STARTECH-COM-ST1000SPEX2L-%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%86%E3%83%83%E3%82%AF-com-PCIe%E6%8E%A5%E7%B6%9A%E3%82%AE%E3%82%AC%E3%83%93%E3%83%83%E3%83%88%E3%82%A4%E3%83%BC%E3%82%B5%E3%83%8D%E3%83%83%E3%83%881%E3%83%9D%E3%83%BC%E3%83%88%E5%A2%97%E8%A8%ADLAN%E3%82%AB%E3%83%BC%E3%83%89-%E3%83%AD%E3%83%BC%E3%83%97%E3%83%AD%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%AF%BE%E5%BF%9C/dp/B00E4KZDJ0" target="_blank">Amazon | StarTech.com PCIe&#x63A5;&#x7D9A;&#x30AE;&#x30AC;&#x30D3;&#x30C3;&#x30C8;&#x30A4;&#x30FC;&#x30B5;&#x30CD;&#x30C3;&#x30C8;1&#x30DD;&#x30FC;&#x30C8;&#x5897;&#x8A2D;LAN&#x30AB;&#x30FC;&#x30C9; &#x30ED;&#x30FC;&#x30D7;&#x30ED;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x5BFE;&#x5FDC; ST1000SPEX2L | StarTech.com | &#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x30FB;&#x5468;&#x8FBA;&#x6A5F;&#x5668; &#x901A;&#x8CA9;</a></p>
+<blockquote>
+<p>Debian&#x3067;&#x306F;&#x7279;&#x306B;&#x30C9;&#x30E9;&#x30A4;&#x30D0;&#x3092;&#x5165;&#x308C;&#x306A;&#x304F;&#x3066;&#x3082;&#x8A8D;&#x8B58;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;</p>
+</blockquote>
+<p><a href="https://www.taruki.com/wp/?p=6394" target="_blank">10GBase-T&#x306E;NIC&#x5C4A;&#x3044;&#x305F;&#x306E;&#x3067;&#x53D6;&#x308A;&#x4ED8;&#x3051; &#x2013; &#x5927;&#x3061;&#x3083;&#x3093;&#x306E;&#x3044;&#x308D;&#x3044;&#x308D;&#x96D1;&#x8A18;</a>
+&#x53D6;&#x4ED8;&#x5F8C;&#x306E;&#x78BA;&#x8A8D;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x4F8B;</p>
+<pre><code>$ lspci
+$ dmesg
 </code></pre>
                                 
                                 </section>
@@ -695,7 +711,7 @@ ssh $remote &quot;cat ~/.ssh/$id_rsa_name.pub &gt;&gt; ~/.ssh/authorized_keys &a
 
             
                 
-                <a href="ln.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Ln">
+                <a href="PCI_Express.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: PCI Express">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -707,7 +723,7 @@ ssh $remote &quot;cat ~/.ssh/$id_rsa_name.pub &gt;&gt; ~/.ssh/authorized_keys &a
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Ssh","level":"1.11.5","depth":2,"next":{"title":"Terminal","level":"1.12","depth":1,"ref":"","articles":[{"title":"Terminator","level":"1.12.1","depth":2,"path":"terminal/terminator.md","ref":"terminal/terminator.md","articles":[]}]},"previous":{"title":"Ln","level":"1.11.4","depth":2,"path":"shell/ln.md","ref":"shell/ln.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"shell/ssh.md","mtime":"2019-03-21T17:35:40.497Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-12T14:07:23.861Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PC Ie NIC","level":"1.9.2","depth":2,"next":{"title":"Python","level":"1.10","depth":1,"ref":"","articles":[{"title":"Tips","level":"1.10.1","depth":2,"path":"python/tips.md","ref":"python/tips.md","articles":[]}]},"previous":{"title":"PCI Express","level":"1.9.1","depth":2,"path":"pc_parts/PCI_Express.md","ref":"pc_parts/PCI_Express.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pc_parts/PCIe_NIC.md","mtime":"2019-04-12T14:07:11.294Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-12T14:07:23.861Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
