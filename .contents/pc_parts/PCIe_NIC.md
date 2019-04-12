@@ -1,6 +1,6 @@
 # PCIe NIC
 
-## [PCIeギガビットNIC \- ロープロファイル \| ギガビットネットワークカード \| StarTech\.com 日本]( https://www.startech.com/jp/Networking-IO/Adapter-Cards/Low-Profile-PCIe-Gigabit-NIC~ST1000SPEX2L )
+#### [PCIeギガビットNIC \- ロープロファイル \| ギガビットネットワークカード \| StarTech\.com 日本]( https://www.startech.com/jp/Networking-IO/Adapter-Cards/Low-Profile-PCIe-Gigabit-NIC~ST1000SPEX2L )
 
 > このギガビットNIC /サーバアダプタは、IEEE 802.3/u/ab規格に準拠し、9Kのジャンボフレーム、VLANタギング、Wake on LAN（WOL）に対応しており、効果的なネットワーク パフォーマンスを提供します。
 
