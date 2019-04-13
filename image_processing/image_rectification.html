@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <title>Array · GitBook</title>
+    <title>Image Rectification · GitBook</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="">
     <meta name="generator" content="GitBook 3.2.3">   
@@ -45,8 +45,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="cmd.html" />
     
+    <link rel="prev" href="camera_calibration.html" />
     
 
 
@@ -261,9 +261,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../image_processing/camera_calibration.html">
+        <li class="chapter " data-level="1.6.1" data-path="camera_calibration.html">
             
-                <a href="../image_processing/camera_calibration.html">
+                <a href="camera_calibration.html">
             
                     
                     Camera Calibration
@@ -274,9 +274,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../image_processing/image_rectification.html">
+        <li class="chapter active" data-level="1.6.2" data-path="image_rectification.html">
             
-                <a href="../image_processing/image_rectification.html">
+                <a href="image_rectification.html">
             
                     
                     Image Rectification
@@ -473,9 +473,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.10.1" data-path="array.html">
+        <li class="chapter " data-level="1.10.1" data-path="../shell/array.html">
             
-                <a href="array.html">
+                <a href="../shell/array.html">
             
                     
                     Array
@@ -486,9 +486,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.2" data-path="cmd.html">
+        <li class="chapter " data-level="1.10.2" data-path="../shell/cmd.html">
             
-                <a href="cmd.html">
+                <a href="../shell/cmd.html">
             
                     
                     Cmd
@@ -499,9 +499,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.3" data-path="coding_rule.html">
+        <li class="chapter " data-level="1.10.3" data-path="../shell/coding_rule.html">
             
-                <a href="coding_rule.html">
+                <a href="../shell/coding_rule.html">
             
                     
                     Coding Rule
@@ -512,9 +512,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.4" data-path="ln.html">
+        <li class="chapter " data-level="1.10.4" data-path="../shell/ln.html">
             
-                <a href="ln.html">
+                <a href="../shell/ln.html">
             
                     
                     Ln
@@ -525,9 +525,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.5" data-path="ssh.html">
+        <li class="chapter " data-level="1.10.5" data-path="../shell/ssh.html">
             
-                <a href="ssh.html">
+                <a href="../shell/ssh.html">
             
                     
                     Ssh
@@ -605,7 +605,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Array</a>
+        <a href=".." >Image Rectification</a>
     </h1>
 </div>
 
@@ -620,22 +620,32 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x914D;&#x5217;">&#x914D;&#x5217;</h1>
-<p><a href="https://qiita.com/b4b4r07/items/e56a8e3471fb45df2f59" target="_blank">bash &#x914D;&#x5217;&#x307E;&#x3068;&#x3081;</a>
-<a href="http://d.hatena.ne.jp/y-kawaz/20100720/1279607344" target="_blank">bash&#x306E;&#x914D;&#x5217;&#x5909;&#x6570;&#x306B;&#x95A2;&#x3059;&#x308B;Tips - y-kawaz&#x306E;&#x65E5;&#x8A18;</a>
-<a href="https://qiita.com/kentaro/items/db9944429ef160987b3a" target="_blank">&#x30B7;&#x30A7;&#x30EB;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x3067;&#x3001;&#x3042;&#x308B;&#x9806;&#x756A;&#x4EE5;&#x964D;&#x306E;&#x5F15;&#x6570;&#x3092;&#x53D6;&#x5F97;&#x3059;&#x308B;</a></p>
-<h2 id="&#x6DFB;&#x5B57;">&#x6DFB;&#x5B57;</h2>
-<p>for&#x6587;&#x3067;&#x306E;&#x51E6;&#x7406;&#x3067;&#x306F;<code>bash</code>&#x3068;<code>zsh</code>&#x756A;&#x53F7;&#x306E;&#x305A;&#x308C;&#x3092;&#x610F;&#x8B58;&#x305B;&#x305A;&#x306B;&#x8A18;&#x8FF0;&#x3067;&#x304D;&#x308B;&#x304C;&#xFF0C;</p>
-<pre><code>ARRAY=(&quot;aaa&quot; &quot;bbb&quot; &quot;ccc&quot; &quot;ddd&quot; &quot;eee&quot;)
-for X in ${ARRAY[*]}; do
-  echo ${X}
-done
-</code></pre><h2 id="&#x5C55;&#x958B;">&#x5C55;&#x958B;</h2>
-<p><code>${keyword[@]}</code>:&#x914D;&#x5217;&#x3092;&#x5C55;&#x958B;
-<code>${@:1}</code>:&#x7B2C;&#x4E00;&#x5F15;&#x6570;&#x4EE5;&#x964D;</p>
-<pre><code>local keyword=${@:1} # &#x914D;&#x5217;&#x3092;&#x6587;&#x5B57;&#x5217;&#x3068;&#x3057;&#x3066;&#x4EE3;&#x5165;
-local keyword=(${@:1}) # &#x914D;&#x5217;&#x3092;&#x914D;&#x5217;&#x3068;&#x3057;&#x3066;&#x4EE3;&#x5165;
-</code></pre>
+                                <h1 id="image-rectification">image rectification</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Image_rectification" target="_blank">Image rectification - Wikipedia</a><ul>
+<li><blockquote>
+<p>Image rectification is a transformation process used to project images onto a common image plane.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/agarciamontoro/image-rectification" target="_blank">agarciamontoro/image-rectification: Implementation of the Loop&amp;Zhang image rectification algorithm.</a></li>
+<li><a href="http://www.sci.utah.edu/~gerig/CS6320-S2012/Materials/CS6320-CV-F2012-Rectification.pdf" target="_blank">PowerPoint Presentation</a><ul>
+<li><blockquote>
+<p>In practice, it is convenient if image scanlines are the epipolar lines.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><a href="http://zone.ni.com/reference/en-XX/help/372916P-01/nivisionconceptsdita/guid-c9c3535b-faf7-4ade-9166-513a49d1b90a/" target="_blank">Stereo Image Rectification - NI Vision 2013 Concepts Help - National Instruments</a></li>
+</ul>
+<p>&#x305D;&#x308C;&#x305E;&#x308C;&#x306E;&#x30AB;&#x30E1;&#x30E9;&#x306E;epipolar line&#x3092;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x306B;&#x5408;&#x308F;&#x305B;&#x308B;</p>
+<h2 id="epipolar-geometry">epipolar geometry</h2>
+<ul>
+<li><a href="http://zellij.hatenablog.com/entry/20120824/p1" target="_blank">&#x30A8;&#x30D4;&#x30DD;&#x30FC;&#x30E9;&#x5E7E;&#x4F55; - &#x5927;&#x4EBA;&#x306B;&#x306A;&#x3063;&#x3066;&#x304B;&#x3089;&#x306E;&#x518D;&#x5B66;&#x7FD2;</a></li>
+<li><a href="http://www.sanko-shoko.net/note.php?id=537r" target="_blank">&#x30A8;&#x30D4;&#x30DD;&#x30FC;&#x30E9;&#x5E7E;&#x4F55; (epipolar geometry)</a></li>
+</ul>
+
                                 
                                 </section>
                             
@@ -662,10 +672,10 @@ local keyword=(${@:1}) # &#x914D;&#x5217;&#x3092;&#x914D;&#x5217;&#x3068;&#x3057
 
             
                 
-                
-                <a href="cmd.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Cmd">
-                    <i class="fa fa-angle-right"></i>
+                <a href="camera_calibration.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Camera Calibration">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -674,7 +684,7 @@ local keyword=(${@:1}) # &#x914D;&#x5217;&#x3092;&#x914D;&#x5217;&#x3068;&#x3057
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Array","level":"1.10.1","depth":2,"next":{"title":"Cmd","level":"1.10.2","depth":2,"path":"shell/cmd.md","ref":"shell/cmd.md","articles":[]},"previous":{"title":"Shell","level":"1.10","depth":1,"ref":"","articles":[{"title":"Array","level":"1.10.1","depth":2,"path":"shell/array.md","ref":"shell/array.md","articles":[]},{"title":"Cmd","level":"1.10.2","depth":2,"path":"shell/cmd.md","ref":"shell/cmd.md","articles":[]},{"title":"Coding Rule","level":"1.10.3","depth":2,"path":"shell/coding_rule.md","ref":"shell/coding_rule.md","articles":[]},{"title":"Ln","level":"1.10.4","depth":2,"path":"shell/ln.md","ref":"shell/ln.md","articles":[]},{"title":"Ssh","level":"1.10.5","depth":2,"path":"shell/ssh.md","ref":"shell/ssh.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"shell/array.md","mtime":"2018-05-27T20:29:09.607Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-13T06:46:46.921Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Image Rectification","level":"1.6.2","depth":2,"next":{"title":"Os","level":"1.7","depth":1,"ref":"","articles":[{"title":"Ubuntu","level":"1.7.1","depth":2,"ref":"","articles":[{"title":"Dual Display","level":"1.7.1.1","depth":3,"path":"os/Ubuntu/dual-display.md","ref":"os/Ubuntu/dual-display.md","articles":[]},{"title":"Partition","level":"1.7.1.2","depth":3,"path":"os/Ubuntu/partition.md","ref":"os/Ubuntu/partition.md","articles":[]},{"title":"SUID SGID Sticky Bit","level":"1.7.1.3","depth":3,"path":"os/Ubuntu/SUID-SGID-sticky-bit.md","ref":"os/Ubuntu/SUID-SGID-sticky-bit.md","articles":[]},{"title":"ubuntu-ja-16.04-desktop-amd64.iso init setup","level":"1.7.1.4","depth":3,"path":"os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.md","ref":"os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.md","articles":[]}]}]},"previous":{"title":"Camera Calibration","level":"1.6.1","depth":2,"path":"image_processing/camera_calibration.md","ref":"image_processing/camera_calibration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"image_processing/image_rectification.md","mtime":"2019-04-13T06:45:48.876Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-13T06:46:46.921Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

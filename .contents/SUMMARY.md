@@ -11,6 +11,7 @@
   * [How To Start](github.io/how-to-start.md)
 - Image Processing
   * [Camera Calibration](image_processing/camera_calibration.md)
+  * [Image Rectification](image_processing/image_rectification.md)
 - Os
   - Ubuntu
     * [Dual Display](os/Ubuntu/dual-display.md)
