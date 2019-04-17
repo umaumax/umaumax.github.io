@@ -15,7 +15,9 @@
 - Os
   - Ubuntu
     * [Dual Display](os/Ubuntu/dual-display.md)
+    * [Ffmpeg Build](os/Ubuntu/ffmpeg_build.md)
     * [Partition](os/Ubuntu/partition.md)
+    * [Shared Library](os/Ubuntu/shared_library.md)
     * [SUID SGID Sticky Bit](os/Ubuntu/SUID-SGID-sticky-bit.md)
     * [ubuntu-ja-16.04-desktop-amd64.iso init setup](os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.md)
 - Pc Parts
