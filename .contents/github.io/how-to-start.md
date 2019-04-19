@@ -30,6 +30,18 @@ $ book sm
 ```
 ディレクトリ名を複数形にすると，中身が1つでも階層構造として判断されるが，中身が複数ならば階層構造となるっぽい?
 
+### book.json
+```
+{
+    "plugins": ["-sharing","hide-published-with"],
+    "language": "ja"
+}
+```
+
+```
+gitbook install
+```
+
 ----
 
 ## FMI

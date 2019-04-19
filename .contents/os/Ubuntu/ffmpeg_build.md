@@ -65,7 +65,10 @@ git checkout n3.0.1 -b n3.0.1
 
 ./configure \
   --toolchain=hardened \
-  --enable-shared
+  --enable-shared \
+  --disable-yasm
+
+# yasm/nasm not found or too old. Use --disable-yasm for a crippled build.
 ```
 
 `--enable-shared`を付加しないと`.a`のみしかbuildしないので注意
@@ -100,4 +103,9 @@ libswscale/libswscale.so.4
 
 ```
 make -j3 |& tee build.log
+```
+
+```
+TARGET_DIR_PATH=<set value here!>
+git ls-files --other --ignored --exclude-standard | grep ".*\.so" | xargs -L 1 -I {} cp {} "$TARGET_DIR_PATH"
 ```
