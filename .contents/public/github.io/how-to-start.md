@@ -29,6 +29,7 @@ $ npm install -g gitbook-summary
 $ book sm
 ```
 ディレクトリ名を複数形にすると，中身が1つでも階層構造として判断されるが，中身が複数ならば階層構造となるっぽい?
+[imfly/gitbook\-summary: A command line tool to generate a summary\.md for Gitbook]( https://github.com/imfly/gitbook-summary )
 
 ### book.json
 ```
@@ -46,7 +47,7 @@ gitbook install
 
 ## FMI
 
-## 構造
+## 構造(old)
 ```
 README.md
 index.html
