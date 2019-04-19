@@ -1,4 +1,6 @@
 {
     "plugins": ["-sharing", "hide-published-with"],
-    "language": "en"
+    "language": "en",
+    "sortedBy": "-",
+    "disableTitleFormatting": true
 }

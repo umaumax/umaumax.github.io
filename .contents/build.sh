@@ -3,7 +3,11 @@ set -ex
 cd $(dirname $0)
 content_root="public"
 content_output_root="_book"
-book sm --disableTitleFormatting --sortedBy 'num-' --root "$content_root"
+pushd "$content_root"
+# NOTE: don't use --root option
+book sm
+popd
+# NOTE: you must run gitbook install at "$content_root" directory not current dir
 gitbook build "$content_root" "$content_output_root"
 set +x
 # NOTE: '.'始まりのファイルは無視される
