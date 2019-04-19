@@ -1,6 +1,13 @@
 {
-    "plugins": ["-sharing", "hide-published-with"],
+    "plugins": ["-sharing", "hide-published-with", "page-treeview", "expandable-chapters", "expand-active-chapter", "navigator"],
     "language": "en",
     "sortedBy": "-",
-    "disableTitleFormatting": true
+    "disableTitleFormatting": true,
+    "pluginsConfig": {
+        "page-treeview": {
+            "copyright": "",
+            "minHeaderCount": "1",
+            "minHeaderDeep": "1"
+        }
+    }
 }
