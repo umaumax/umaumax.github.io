@@ -10,7 +10,7 @@ set +x
 git_repo_root=$(git rev-parse --show-toplevel)
 for name in $(ls "$git_repo_root"); do
 	[[ $name == README.md ]] && continue
-	echo git rm -r "$git_repo_root/$name"
+	rm -r "$git_repo_root/$name"
 done
 set -x
 cp "$content_root/README.md" "$git_repo_root"
