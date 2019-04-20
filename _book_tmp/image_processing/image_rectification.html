@@ -1,0 +1,823 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>image_rectification · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expand-active-chapter/expand-active-chapter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-navigator/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-git-author/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="camera_calibration.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    academic
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../academic/HPC-conference.html">
+            
+                <a href="../academic/HPC-conference.html">
+            
+                    
+                    conference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    clang
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    libtooling
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../clang/libtooling/clang-libtooling tutorial.html">
+            
+                <a href="../clang/libtooling/clang-libtooling tutorial.html">
+            
+                    
+                    libtooling tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    font
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../font/monaco.html">
+            
+                <a href="../font/monaco.html">
+            
+                    
+                    monaco
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    github.io
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../github.io/how-to-start.html">
+            
+                <a href="../github.io/how-to-start.html">
+            
+                    
+                    to-start
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    hpc
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../hpc/performance.html">
+            
+                <a href="../hpc/performance.html">
+            
+                    
+                    performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    image_processing
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="camera_calibration.html">
+            
+                <a href="camera_calibration.html">
+            
+                    
+                    camera_calibration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.2" data-path="image_rectification.html">
+            
+                <a href="image_rectification.html">
+            
+                    
+                    image_rectification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    os
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" >
+            
+                <span>
+            
+                    
+                    Ubuntu
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../os/Ubuntu/dual-display.html">
+            
+                <a href="../os/Ubuntu/dual-display.html">
+            
+                    
+                    display
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../os/Ubuntu/ffmpeg_build.html">
+            
+                <a href="../os/Ubuntu/ffmpeg_build.html">
+            
+                    
+                    ffmpeg_build
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="../os/Ubuntu/partition.html">
+            
+                <a href="../os/Ubuntu/partition.html">
+            
+                    
+                    partition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.4" data-path="../os/Ubuntu/shared_library.html">
+            
+                <a href="../os/Ubuntu/shared_library.html">
+            
+                    
+                    shared_library
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.5" data-path="../os/Ubuntu/SUID-SGID-sticky-bit.html">
+            
+                <a href="../os/Ubuntu/SUID-SGID-sticky-bit.html">
+            
+                    
+                    SGID-sticky-bit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.6" data-path="../os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.html">
+            
+                <a href="../os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.html">
+            
+                    
+                    ja-16.04-desktop-amd64.iso init setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    pc_parts
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../pc_parts/PCI_Express.html">
+            
+                <a href="../pc_parts/PCI_Express.html">
+            
+                    
+                    PCI_Express
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../pc_parts/PCIe_NIC.html">
+            
+                <a href="../pc_parts/PCIe_NIC.html">
+            
+                    
+                    PCIe_NIC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../python/tips.html">
+            
+                <a href="../python/tips.html">
+            
+                    
+                    tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    shell
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../shell/array.html">
+            
+                <a href="../shell/array.html">
+            
+                    
+                    array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../shell/cmd.html">
+            
+                <a href="../shell/cmd.html">
+            
+                    
+                    cmd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../shell/coding_rule.html">
+            
+                <a href="../shell/coding_rule.html">
+            
+                    
+                    coding_rule
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../shell/ln.html">
+            
+                <a href="../shell/ln.html">
+            
+                    
+                    ln
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../shell/ssh.html">
+            
+                <a href="../shell/ssh.html">
+            
+                    
+                    ssh
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    terminal
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../terminal/terminator.html">
+            
+                <a href="../terminal/terminator.html">
+            
+                    
+                    terminator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >image_rectification</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="treeview__container"><ul>
+<li><div><a href="#image-rectification">image rectification</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#epipolar-geometry">epipolar geometry</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="image_rectification">image rectification</h1>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Image_rectification" target="_blank">Image rectification - Wikipedia</a><ul>
+<li><blockquote>
+<p>Image rectification is a transformation process used to project images onto a common image plane.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/agarciamontoro/image-rectification" target="_blank">agarciamontoro/image-rectification: Implementation of the Loop&amp;Zhang image rectification algorithm.</a></li>
+<li><a href="http://www.sci.utah.edu/~gerig/CS6320-S2012/Materials/CS6320-CV-F2012-Rectification.pdf" target="_blank">PowerPoint Presentation</a><ul>
+<li><blockquote>
+<p>In practice, it is convenient if image scanlines are the epipolar lines.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><a href="http://zone.ni.com/reference/en-XX/help/372916P-01/nivisionconceptsdita/guid-c9c3535b-faf7-4ade-9166-513a49d1b90a/" target="_blank">Stereo Image Rectification - NI Vision 2013 Concepts Help - National Instruments</a></li>
+</ul>
+<p>&#x305D;&#x308C;&#x305E;&#x308C;&#x306E;&#x30AB;&#x30E1;&#x30E9;&#x306E;epipolar line&#x3092;&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x306B;&#x5408;&#x308F;&#x305B;&#x308B;</p>
+<h2 id="epipolar_geometry">1. epipolar geometry</h2>
+<ul>
+<li><a href="http://zellij.hatenablog.com/entry/20120824/p1" target="_blank">&#x30A8;&#x30D4;&#x30DD;&#x30FC;&#x30E9;&#x5E7E;&#x4F55; - &#x5927;&#x4EBA;&#x306B;&#x306A;&#x3063;&#x3066;&#x304B;&#x3089;&#x306E;&#x518D;&#x5B66;&#x7FD2;</a></li>
+<li><a href="http://www.sanko-shoko.net/note.php?id=537r" target="_blank">&#x30A8;&#x30D4;&#x30DD;&#x30FC;&#x30E9;&#x5E7E;&#x4F55; (epipolar geometry)</a></li>
+</ul>
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#image_rectification">image rectification</a></p><li><a href="#epipolar_geometry">1. epipolar geometry</a></li></ul></div><a href="#epipolar_geometry" id="goTop"><i class="fa fa-arrow-up"></i></a><div class="git-author-container git-author-bottom"><div class="modified">Last modified by umaumax 2019-04-20 11:21:37</div><div class="created">Created by umaumax 2019-04-20 11:21:37</div></div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="camera_calibration.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: camera_calibration">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"image_rectification","level":"1.7.2","depth":2,"next":{"title":"os","level":"1.8","depth":1,"ref":"","articles":[{"title":"Ubuntu","level":"1.8.1","depth":2,"ref":"","articles":[{"title":"display","level":"1.8.1.1","depth":3,"path":"os/Ubuntu/dual-display.md","ref":"os/Ubuntu/dual-display.md","articles":[]},{"title":"ffmpeg_build","level":"1.8.1.2","depth":3,"path":"os/Ubuntu/ffmpeg_build.md","ref":"os/Ubuntu/ffmpeg_build.md","articles":[]},{"title":"partition","level":"1.8.1.3","depth":3,"path":"os/Ubuntu/partition.md","ref":"os/Ubuntu/partition.md","articles":[]},{"title":"shared_library","level":"1.8.1.4","depth":3,"path":"os/Ubuntu/shared_library.md","ref":"os/Ubuntu/shared_library.md","articles":[]},{"title":"SGID-sticky-bit","level":"1.8.1.5","depth":3,"path":"os/Ubuntu/SUID-SGID-sticky-bit.md","ref":"os/Ubuntu/SUID-SGID-sticky-bit.md","articles":[]},{"title":"ja-16.04-desktop-amd64.iso init setup","level":"1.8.1.6","depth":3,"path":"os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.md","ref":"os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.md","articles":[]}]}]},"previous":{"title":"camera_calibration","level":"1.7.1","depth":2,"path":"image_processing/camera_calibration.md","ref":"image_processing/camera_calibration.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with","page-treeview","expandable-chapters","expand-active-chapter","navigator","git-author","copy-code-button"],"ignores":[".*","_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"1","minHeaderDeep":"1"},"git-author":{"position":"bottom","modifyTpl":"Last modified by {user} {timeStamp}","createTpl":"Created by {user} {timeStamp}","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"expand-active-chapter":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"language":"en","gitbook":"*"},"file":{"path":"image_processing/image_rectification.md","mtime":"2019-04-20T02:19:23.445Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-20T03:23:09.677Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expand-active-chapter/expand-active-chapter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
