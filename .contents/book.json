@@ -1,6 +1,7 @@
 {
-    "plugins": ["-sharing", "hide-published-with", "page-treeview", "expandable-chapters", "expand-active-chapter", "navigator"],
+    "plugins": ["-sharing", "hide-published-with", "page-treeview", "expandable-chapters", "expand-active-chapter", "navigator", "git-author", "copy-code-button"],
     "language": "en",
+    "ignores": [".*", "_book", "node_modules"],
     "sortedBy": "-",
     "disableTitleFormatting": true,
     "pluginsConfig": {
@@ -8,6 +9,12 @@
             "copyright": "",
             "minHeaderCount": "1",
             "minHeaderDeep": "1"
+        },
+        "git-author": {
+            "position": "bottom",
+            "modifyTpl": "Last modified by {user} {timeStamp}",
+            "createTpl": "Created by {user} {timeStamp}",
+            "timeStampFormat": "YYYY-MM-DD HH:mm:ss"
         }
     }
 }
