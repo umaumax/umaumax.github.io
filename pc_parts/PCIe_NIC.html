@@ -758,7 +758,11 @@
 </li>
 <li><p>&#x62E1;&#x5F35;&#x30AB;&#x30FC;&#x30C9;&#x3092;&#x56FA;&#x5B9A;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x30CD;&#x30B8;&#x306F;&#x4ED8;&#x5C5E;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;(&#x4ED8;&#x5C5E;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x5834;&#x5408;&#x306E;&#x307B;&#x3046;&#x304C;&#x591A;&#x3044;&#x3089;&#x3057;&#x3044;)</p>
 <ul>
-<li>&#x30A4;&#x30F3;&#x30C1;&#x30CD;&#x30B8;(not &#x30DF;&#x30EA;&#x30CD;&#x30B8;)</li>
+<li>&#x30A4;&#x30F3;&#x30C1;&#x30CD;&#x30B8;(not &#x30DF;&#x30EA;&#x30CD;&#x30B8;)<ul>
+<li><a href="https://www.sanwa.co.jp/product/syohin.asp?code=TK-P8" target="_blank">TK-P8&#x3010;&#x516D;&#x89D2;&#x30A4;&#x30F3;&#x30C1;&#x30CD;&#x30B8;&#x3011;DOS/V&#x30D1;&#x30BD;&#x30B3;&#x30F3;&#x306E;&#x7D44;&#x7ACB;&#x3066;&#x306B;&#x5FC5;&#x8981;&#x306A;&#x30D1;&#x30FC;&#x30C4;&#x3067;&#x3059;&#x3002; - &#x30B5;&#x30F3;&#x30EF;&#x30B5;&#x30D7;&#x30E9;&#x30A4;&#x682A;&#x5F0F;&#x4F1A;&#x793E;</a></li>
+<li>&#x4E88;&#x5099;&#x306E;&#x30CD;&#x30B8;&#x304C;&#x3042;&#x3063;&#x305F;&#x308A;&#x3059;&#x308B;&#x306E;&#x3067;&#x3001;&#x4EEE;&#x306B;&#x305D;&#x308C;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x3082;&#x826F;&#x3044;</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p><a href="https://www2.mouse-jp.co.jp/ssl/user_support2/sc_faq_documents.asp?FaqID=23311" target="_blank">&#x30DE;&#x30A6;&#x30B9;&#x30B3;&#x30F3;&#x30D4;&#x30E5;&#x30FC;&#x30BF;&#x30FC; FAQ &#x30A2;&#x30FC;&#x30AB;&#x30A4;&#x30D6;&#x30DA;&#x30FC;&#x30B8;</a></p>
@@ -782,35 +786,41 @@
 <p>Debian&#x3067;&#x306F;&#x7279;&#x306B;&#x30C9;&#x30E9;&#x30A4;&#x30D0;&#x3092;&#x5165;&#x308C;&#x306A;&#x304F;&#x3066;&#x3082;&#x8A8D;&#x8B58;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;</p>
 </blockquote>
 <ul>
-<li><a href="https://www.taruki.com/wp/?p=6394" target="_blank">10GBase-T&#x306E;NIC&#x5C4A;&#x3044;&#x305F;&#x306E;&#x3067;&#x53D6;&#x308A;&#x4ED8;&#x3051; &#x2013; &#x5927;&#x3061;&#x3083;&#x3093;&#x306E;&#x3044;&#x308D;&#x3044;&#x308D;&#x96D1;&#x8A18;</a></li>
-</ul>
-<p>&#x53D6;&#x4ED8;&#x5F8C;&#x306E;&#x78BA;&#x8A8D;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x4F8B;</p>
-<pre><code>$ ifconfig
+<li><p><a href="https://www.taruki.com/wp/?p=6394" target="_blank">10GBase-T&#x306E;NIC&#x5C4A;&#x3044;&#x305F;&#x306E;&#x3067;&#x53D6;&#x308A;&#x4ED8;&#x3051; &#x2013; &#x5927;&#x3061;&#x3083;&#x3093;&#x306E;&#x3044;&#x308D;&#x3044;&#x308D;&#x96D1;&#x8A18;</a></p>
+</li>
+<li><p>&#x53D6;&#x4ED8;&#x5F8C;&#x306E;&#x78BA;&#x8A8D;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x4F8B;</p>
+<ul>
+<li>&#x5897;&#x8A2D;&#x5F8C;&#x306E;<code>nmcli</code>&#x3067;&#x306F;&#x3001;&#x7269;&#x7406;&#x7684;&#x306B;LAN&#x3092;&#x3064;&#x306A;&#x3052;&#x3066;&#x304B;&#x3089;</li>
+<li>driver&#x306E;install&#x306F;&#x4E0D;&#x8981;(Ubuntu16.04)<pre><code>$ ifconfig
 $ lspci -v
 # for avoid &apos;Capabilities: &lt;access denied&gt;&apos;
 $ sudo lspci -vv
 $ dmesg -T
-</code></pre><p>e.g.</p>
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<p>e.g.</p>
 <pre><code>$ lspci -v
 03:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 15)
-    Subsystem: Micro-Star International Co., Ltd. [MSI] RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
-    Flags: bus master, fast devsel, latency 0, IRQ 123
-    I/O ports at 4000 [size=256]
-    Memory at a2104000 (64-bit, non-prefetchable) [size=4K]
-    Memory at a2100000 (64-bit, non-prefetchable) [size=16K]
-    Capabilities: &lt;access denied&gt;
-    Kernel driver in use: r8169
-    Kernel modules: r8169
+  Subsystem: Micro-Star International Co., Ltd. [MSI] RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
+  Flags: bus master, fast devsel, latency 0, IRQ 123
+  I/O ports at 4000 [size=256]
+  Memory at a2104000 (64-bit, non-prefetchable) [size=4K]
+  Memory at a2100000 (64-bit, non-prefetchable) [size=16K]
+  Capabilities: &lt;access denied&gt;
+  Kernel driver in use: r8169
+  Kernel modules: r8169
 
 04:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 06)
-    Subsystem: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
-    Flags: bus master, fast devsel, latency 0, IRQ 124
-    I/O ports at 3000 [size=256]
-    Memory at a0004000 (64-bit, prefetchable) [size=4K]
-    Memory at a0000000 (64-bit, prefetchable) [size=16K]
-    Capabilities: &lt;access denied&gt;
-    Kernel driver in use: r8169
-    Kernel modules: r8169
+  Subsystem: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
+  Flags: bus master, fast devsel, latency 0, IRQ 124
+  I/O ports at 3000 [size=256]
+  Memory at a0004000 (64-bit, prefetchable) [size=4K]
+  Memory at a0000000 (64-bit, prefetchable) [size=16K]
+  Capabilities: &lt;access denied&gt;
+  Kernel driver in use: r8169
+  Kernel modules: r8169
 </code></pre><ul>
 <li><p>prefetchable, non-prefetchable</p>
 <ul>
@@ -827,7 +837,7 @@ $ dmesg -T
 </ul>
 </li>
 </ul>
-<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#PCIe_NIC">PCIe NIC</a></p><li><a href="#">none</a></li><ul><li><a href="#">none</a></li><ul><li><a href="#PCIe&#x30AE;&#x30AC;&#x30D3;&#x30C3;&#x30C8;NIC_-_&#x30ED;&#x30FC;&#x30D7;&#x30ED;&#x30D5;&#x30A1;&#x30A4;&#x30EB;_%7C_&#x30AE;&#x30AC;&#x30D3;&#x30C3;&#x30C8;&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x30AB;&#x30FC;&#x30C9;_%7C_StarTech_com_&#x65E5;&#x672C;">0.0.1. PCIe&#x30AE;&#x30AC;&#x30D3;&#x30C3;&#x30C8;NIC - &#x30ED;&#x30FC;&#x30D7;&#x30ED;&#x30D5;&#x30A1;&#x30A4;&#x30EB; | &#x30AE;&#x30AC;&#x30D3;&#x30C3;&#x30C8;&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x30AB;&#x30FC;&#x30C9; | StarTech.com &#x65E5;&#x672C;</a></li></ul></ul></ul></div><a href="#" id="goTop"><i class="fa fa-arrow-up"></i></a><div class="git-author-container git-author-bottom"><div class="modified">Last modified by umaumax 2019-04-20 11:21:37</div><div class="created">Created by umaumax 2019-04-20 11:21:37</div></div>
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#PCIe_NIC">PCIe NIC</a></p><li><a href="#">none</a></li><ul><li><a href="#">none</a></li><ul><li><a href="#PCIe&#x30AE;&#x30AC;&#x30D3;&#x30C3;&#x30C8;NIC_-_&#x30ED;&#x30FC;&#x30D7;&#x30ED;&#x30D5;&#x30A1;&#x30A4;&#x30EB;_%7C_&#x30AE;&#x30AC;&#x30D3;&#x30C3;&#x30C8;&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x30AB;&#x30FC;&#x30C9;_%7C_StarTech_com_&#x65E5;&#x672C;">0.0.1. PCIe&#x30AE;&#x30AC;&#x30D3;&#x30C3;&#x30C8;NIC - &#x30ED;&#x30FC;&#x30D7;&#x30ED;&#x30D5;&#x30A1;&#x30A4;&#x30EB; | &#x30AE;&#x30AC;&#x30D3;&#x30C3;&#x30C8;&#x30CD;&#x30C3;&#x30C8;&#x30EF;&#x30FC;&#x30AF;&#x30AB;&#x30FC;&#x30C9; | StarTech.com &#x65E5;&#x672C;</a></li></ul></ul></ul></div><a href="#" id="goTop"><i class="fa fa-arrow-up"></i></a><div class="git-author-container git-author-bottom"><div class="modified">Last modified by umaumax 2019-04-22 23:30:30</div><div class="created">Created by umaumax 2019-04-20 11:21:37</div></div>
                                 
                                 </section>
                             
@@ -866,7 +876,7 @@ $ dmesg -T
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PCIe_NIC","level":"1.10.2","depth":2,"next":{"title":"python","level":"1.11","depth":1,"ref":"","articles":[{"title":"tips","level":"1.11.1","depth":2,"path":"python/tips.md","ref":"python/tips.md","articles":[]}]},"previous":{"title":"PCI_Express","level":"1.10.1","depth":2,"path":"pc_parts/PCI_Express.md","ref":"pc_parts/PCI_Express.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with","page-treeview","expandable-chapters","expand-active-chapter","navigator","git-author","copy-code-button"],"ignores":[".*","_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"1","minHeaderDeep":"1"},"git-author":{"position":"bottom","modifyTpl":"Last modified by {user} {timeStamp}","createTpl":"Created by {user} {timeStamp}","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"expand-active-chapter":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"language":"en","gitbook":"*"},"file":{"path":"pc_parts/PCIe_NIC.md","mtime":"2019-04-20T02:19:23.018Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-21T06:33:36.532Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PCIe_NIC","level":"1.10.2","depth":2,"next":{"title":"python","level":"1.11","depth":1,"ref":"","articles":[{"title":"tips","level":"1.11.1","depth":2,"path":"python/tips.md","ref":"python/tips.md","articles":[]}]},"previous":{"title":"PCI_Express","level":"1.10.1","depth":2,"path":"pc_parts/PCI_Express.md","ref":"pc_parts/PCI_Express.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with","page-treeview","expandable-chapters","expand-active-chapter","navigator","git-author","copy-code-button"],"ignores":[".*","_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"1","minHeaderDeep":"1"},"git-author":{"position":"bottom","modifyTpl":"Last modified by {user} {timeStamp}","createTpl":"Created by {user} {timeStamp}","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"expand-active-chapter":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"language":"en","gitbook":"*"},"file":{"path":"pc_parts/PCIe_NIC.md","mtime":"2019-04-22T14:30:22.935Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-22T14:30:51.796Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
