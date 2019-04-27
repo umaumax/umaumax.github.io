@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>libtooling tutorial · GitBook</title>
+        <title>chrome_extensions · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -180,9 +180,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1.1" data-path="clang-libtooling tutorial.html">
+        <li class="chapter " data-level="1.3.1.1" data-path="../../clang/libtooling/clang-libtooling tutorial.html">
             
-                <a href="clang-libtooling tutorial.html">
+                <a href="../../clang/libtooling/clang-libtooling tutorial.html">
             
                     
                     libtooling tutorial
@@ -712,9 +712,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.14.1" data-path="../../web/chrome_extensions/chrome_extensions.html">
+        <li class="chapter active" data-level="1.14.1" data-path="chrome_extensions.html">
             
-                <a href="../../web/chrome_extensions/chrome_extensions.html">
+                <a href="chrome_extensions.html">
             
                     
                     chrome_extensions
@@ -760,7 +760,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >libtooling tutorial</a>
+        <a href="../.." >chrome_extensions</a>
     </h1>
 </div>
 
@@ -776,128 +776,72 @@
                                 <section class="normal markdown-section">
                                 
                                 <div class="treeview__container"><ul>
-<li><div><a href="#clang-libtooling-tutorial">clang-libtooling tutorial</a><i></i></div></li>
+<li><div><a href="#chrome-extensions">chrome extensions</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#extensions">extensions</a><i></i></div></li>
+<li><div><a href="#note">NOTE</a><i></i></div></li>
+<li><div><a href="#dev-tips">dev tips</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x305D;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;chrome-extension&#x304C;&#x8AAD;&#x307F;&#x8FBC;&#x307E;&#x308C;&#x3066;&#x3044;&#x308B;&#x304B;&#x3069;&#x3046;&#x304B;&#x306E;&#x78BA;&#x8A8D;">&#x305D;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;chrome extension&#x304C;&#x8AAD;&#x307F;&#x8FBC;&#x307E;&#x308C;&#x3066;&#x3044;&#x308B;&#x304B;&#x3069;&#x3046;&#x304B;&#x306E;&#x78BA;&#x8A8D;</a><i></i></div></li>
+<li><div><a href="#consolelog&#x304C;&#x3067;&#x3066;&#x3053;&#x306A;&#x3044;">console.log()&#x304C;&#x3067;&#x3066;&#x3053;&#x306A;&#x3044;</a><i></i></div></li>
+<li><div><a href="#manifestversion&#x306F;2&#x4EE5;&#x4E0A;&#x306B;">&quot;manifest_version&quot;&#x306F;2&#x4EE5;&#x4E0A;&#x306B;</a><i></i></div></li>
+<li><div><a href="#version&#x3092;&#x66F4;&#x65B0;&#x3057;&#x3066;&#x77E2;&#x5370;&#x306E;&#x30EA;&#x30ED;&#x30FC;&#x30C9;&#x30DC;&#x30BF;&#x30F3;">&quot;version&quot;&#x3092;&#x66F4;&#x65B0;&#x3057;&#x3066;&#x77E2;&#x5370;&#x306E;&#x30EA;&#x30ED;&#x30FC;&#x30C9;&#x30DC;&#x30BF;&#x30F3;</a><i></i></div></li>
+</ul></li>
+</ul></li>
 </ul>
 </div>
 
-<h1 id="clang-libtooling_tutorial">clang-libtooling tutorial</h1>
-<p><a href="http://clang.llvm.org/docs/LibASTMatchersTutorial.html" target="_blank">Tutorial for building tools using LibTooling and LibASTMatchers &#x2014; Clang 7 documentation</a></p>
-<p>[loop-cdetector.cpp]</p>
-<pre><code class="lang-c++">// Declares clang::SyntaxOnlyAction.
-#include &quot;clang/Frontend/FrontendActions.h&quot;
-#include &quot;clang/Tooling/CommonOptionsParser.h&quot;
-#include &quot;clang/Tooling/Tooling.h&quot;
-// Declares llvm::cl::extrahelp.
-#include &quot;llvm/Support/CommandLine.h&quot;
-
-using namespace clang::tooling;
-using namespace llvm;
-
-#include &quot;clang/ASTMatchers/ASTMatchFinder.h&quot;
-#include &quot;clang/ASTMatchers/ASTMatchers.h&quot;
-
-using namespace clang;
-using namespace clang::ast_matchers;
-
-StatementMatcher LoopMatcher = forStmt(hasLoopInit(declStmt(hasSingleDecl(varDecl(hasInitializer(integerLiteral(equals(0)))))))).bind(&quot;forLoop&quot;);
-
-class LoopPrinter : public MatchFinder::MatchCallback {
- public:
-  virtual void run(const MatchFinder::MatchResult &amp;Result) {
-    if (const ForStmt *FS = Result.Nodes.getNodeAs&lt;clang::ForStmt&gt;(&quot;forLoop&quot;)) FS-&gt;dump();
-  }
-};
-
-// Apply a custom category to all command-line options so that they are the
-// only ones displayed.
-static llvm::cl::OptionCategory MyToolCategory(&quot;my-tool options&quot;);
-
-// CommonOptionsParser declares HelpMessage with a description of the common
-// command-line options related to the compilation database and input files.
-// It&apos;s nice to have this help message in all tools.
-static cl::extrahelp CommonHelp(CommonOptionsParser::HelpMessage);
-
-// A help message for this specific tool can be added afterwards.
-static cl::extrahelp MoreHelp(&quot;\nMore help text...&quot;);
-
-int main(int argc, const char **argv) {
-  CommonOptionsParser OptionsParser(argc, argv, MyToolCategory);
-  ClangTool Tool(OptionsParser.getCompilations(), OptionsParser.getSourcePathList());
-
-  LoopPrinter Printer;
-  MatchFinder Finder;
-  Finder.addMatcher(LoopMatcher, &amp;Printer);
-
-  return Tool.run(newFrontendActionFactory(&amp;Finder).get());
-}
-</code></pre>
-<p>[build-clang-tools.sh]</p>
-<pre><code class="lang-sh"><span class="hljs-meta">#!/usr/bin/env bash</span>
-clang++ <span class="hljs-variable">$@</span> \
-    -Wl,--start-group \
-    $(llvm-config --cxxflags) \
-    $(llvm-config --ldflags --libs --system-libs) \
-    -lclang \
-    -lclangAST \
-    -lclangASTMatchers \
-    -lclangAnalysis \
-    -lclangBasic \
-    -lclangDriver \
-    -lclangEdit \
-    -lclangFrontend \
-    -lclangFrontendTool \
-    -lclangLex \
-    -lclangParse \
-    -lclangSema \
-    -lclangEdit \
-    -lclangRewrite \
-    -lclangRewriteFrontend \
-    -lclangStaticAnalyzerFrontend \
-    -lclangStaticAnalyzerCheckers \
-    -lclangStaticAnalyzerCore \
-    -lclangSerialization \
-    -lclangToolingCore \
-    -lclangTooling \
-    -lclangFormat \
-    -Wl,--end-group
-</code></pre>
+<h1 id="chrome_extensions">chrome extensions</h1>
+<h2 id="extensions">1. extensions</h2>
 <ul>
-<li>mac&#x3067;&#x306F;<code>-Wl,--start-group</code>,<code>-Wl,--end-group</code>&#x306F;&#x4E0D;&#x8981;&#x3060;&#x3063;&#x305F;</li>
+<li>3rd extensions<ul>
+<li>Adblock Plus</li>
+<li>Always Clear Downloads</li>
+<li>Auto Replay for YouTube</li>
+<li>AutoPagerize</li>
+<li>Create Link</li>
+<li>Google search results shortcuts</li>
+<li>Keepa - Amazon Price Tracker</li>
+<li>Momentum</li>
+<li>OneTab</li>
+<li>Session Buddy</li>
+<li>Video Adblocker for Youtube&#x2122; Extension</li>
+<li>Vimium<ul>
+<li><code>esc+o</code>: bookmark and history search</li>
+<li><code>esc+b</code>: bookmark search</li>
+<li><code>?</code>: shortcut confirmation</li>
 </ul>
-<pre><code>./build-clang-tools.sh loop-detector.cpp
-</code></pre><p>[test.cpp]</p>
-<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
-<span class="hljs-keyword">class</span> Y {
- <span class="hljs-keyword">public</span>:
-  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">doSomething</span><span class="hljs-params">()</span></span>;
-};
-
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">z</span><span class="hljs-params">()</span> </span>{
-  Y y;
-  y.doSomething();
-}
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">doSomething</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{
-  <span class="hljs-keyword">if</span> (i == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-  <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> + doSomething(i--);
-}
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
-    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;hello world&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
-  }
-  <span class="hljs-keyword">return</span> doSomething(<span class="hljs-number">2</span>);
-}
-</code></pre>
-<p>[run]</p>
-<pre><code># mac
-./loop-detector test.cpp -- -std=c++11 -I/usr/local/Cellar/llvm/6.0.0/include/c++/v1 -I/usr/local/include -I/usr/local/Cellar/llvm/6.0.0/lib/clang/6.0.0/include -I/usr/include
-# ubuntu
-./loop-detector test.cpp --
-</code></pre><ul>
-<li>&#x203B; &#x30A4;&#x30F3;&#x30AF;&#x30EB;&#x30FC;&#x30C9;&#x30D8;&#x30C3;&#x30C0;&#x306F;<code>clang++ -v</code>&#x3067;&#x78BA;&#x8A8D;&#x3059;&#x308B;&#x3068;&#x826F;&#x3044;</li>
+</li>
+<li>Weblio&#x30DD;&#x30C3;&#x30D7;&#x30A2;&#x30C3;&#x30D7;&#x82F1;&#x548C;&#x8F9E;&#x5178;</li>
+<li>Quick Tabs<ul>
+<li>search targets are all windows&apos;s tabs, recently closed pages, and bookmarks</li>
+<li><code>command+e</code>: search</li>
 </ul>
-<div class="git-author-container git-author-bottom"><div class="modified">Last modified by umaumax 2019-04-20 11:21:37</div><div class="created">Created by umaumax 2019-04-20 11:21:37</div></div>
+</li>
+<li>(ato-ichinen)</li>
+</ul>
+</li>
+<li>my extensions<ul>
+<li>[google-one-click-searcher]</li>
+<li>[qiita-all-items-auto-scroll]</li>
+</ul>
+</li>
+</ul>
+<h2 id="NOTE">2. NOTE</h2>
+<ul>
+<li><code>Vichrome</code>&#x304C;&#x52D5;&#x304B;&#x306A;&#x3044;&#x306E;&#x3067;&#xFF0C;<code>Vimium</code><ul>
+<li><a href="https://ponika.net/493" target="_blank">&#x30DE;&#x30A6;&#x30B9;&#x306A;&#x3057;&#x3067;&#x30D6;&#x30E9;&#x30A6;&#x30B6;&#x64CD;&#x4F5C;&#xFF01;Google Chrome&#x62E1;&#x5F35;&#x300C;Vimium&#x300D;&#x4F7F;&#x3044;&#x65B9; | &#x307D;&#x306B;&#x304B;&#x3061;&#x3083;&#x3093;&#x306D;&#x308B;</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="dev_tips">3. dev tips</h2>
+<h3 id="&#x305D;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;chrome_extension&#x304C;&#x8AAD;&#x307F;&#x8FBC;&#x307E;&#x308C;&#x3066;&#x3044;&#x308B;&#x304B;&#x3069;&#x3046;&#x304B;&#x306E;&#x78BA;&#x8A8D;">3.1. &#x305D;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;chrome extension&#x304C;&#x8AAD;&#x307F;&#x8FBC;&#x307E;&#x308C;&#x3066;&#x3044;&#x308B;&#x304B;&#x3069;&#x3046;&#x304B;&#x306E;&#x78BA;&#x8A8D;</h3>
+<p>console&#x306E;<code>top</code>&#x3068;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x30D7;&#x30EB;&#x30C0;&#x30A6;&#x30F3;&#x3092;&#x78BA;&#x8A8D;(JavaScript contexts)</p>
+<h3 id="console_log()&#x304C;&#x3067;&#x3066;&#x3053;&#x306A;&#x3044;">3.2. console.log()&#x304C;&#x3067;&#x3066;&#x3053;&#x306A;&#x3044;</h3>
+<p><code>Filter</code>&#x306B;&#x4F59;&#x8A08;&#x306A;&#x6587;&#x5B57;&#x304C;&#x5165;&#x3063;&#x3066;&#x3044;&#x306A;&#x3044;&#x304B;&#x306E;&#x78BA;&#x8A8D;&#x3092;&#x3059;&#x308B;&#x3053;&#x3068;(&#x4EE5;&#x524D;&#x306E;&#x8A2D;&#x5B9A;&#x304C;&#x6B8B;&#x3063;&#x3066;&#x3044;&#x308B;&#x53EF;&#x80FD;&#x6027;&#x304C;&#x3042;&#x308B;&#x305F;&#x3081;)</p>
+<h3 id="&quot;manifest_version&quot;&#x306F;2&#x4EE5;&#x4E0A;&#x306B;">3.3. &quot;manifest_version&quot;&#x306F;2&#x4EE5;&#x4E0A;&#x306B;</h3>
+<h3 id="&quot;version&quot;&#x3092;&#x66F4;&#x65B0;&#x3057;&#x3066;&#x77E2;&#x5370;&#x306E;&#x30EA;&#x30ED;&#x30FC;&#x30C9;&#x30DC;&#x30BF;&#x30F3;">3.4. &quot;version&quot;&#x3092;&#x66F4;&#x65B0;&#x3057;&#x3066;&#x77E2;&#x5370;&#x306E;&#x30EA;&#x30ED;&#x30FC;&#x30C9;&#x30DC;&#x30BF;&#x30F3;</h3>
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#chrome_extensions">chrome extensions</a></p><li><a href="#extensions">1. extensions</a></li><li><a href="#NOTE">2. NOTE</a></li><li><a href="#dev_tips">3. dev tips</a></li><ul><li><a href="#&#x305D;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;chrome_extension&#x304C;&#x8AAD;&#x307F;&#x8FBC;&#x307E;&#x308C;&#x3066;&#x3044;&#x308B;&#x304B;&#x3069;&#x3046;&#x304B;&#x306E;&#x78BA;&#x8A8D;">3.1. &#x305D;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;chrome extension&#x304C;&#x8AAD;&#x307F;&#x8FBC;&#x307E;&#x308C;&#x3066;&#x3044;&#x308B;&#x304B;&#x3069;&#x3046;&#x304B;&#x306E;&#x78BA;&#x8A8D;</a></li><li><a href="#console_log()&#x304C;&#x3067;&#x3066;&#x3053;&#x306A;&#x3044;">3.2. console.log()&#x304C;&#x3067;&#x3066;&#x3053;&#x306A;&#x3044;</a></li><li><a href="#%22manifest_version%22&#x306F;2&#x4EE5;&#x4E0A;&#x306B;">3.3. &quot;manifest_version&quot;&#x306F;2&#x4EE5;&#x4E0A;&#x306B;</a></li><li><a href="#%22version%22&#x3092;&#x66F4;&#x65B0;&#x3057;&#x3066;&#x77E2;&#x5370;&#x306E;&#x30EA;&#x30ED;&#x30FC;&#x30C9;&#x30DC;&#x30BF;&#x30F3;">3.4. &quot;version&quot;&#x3092;&#x66F4;&#x65B0;&#x3057;&#x3066;&#x77E2;&#x5370;&#x306E;&#x30EA;&#x30ED;&#x30FC;&#x30C9;&#x30DC;&#x30BF;&#x30F3;</a></li></ul></ul></div><a href="#extensions" id="goTop"><i class="fa fa-arrow-up"></i></a><div class="git-author-container git-author-bottom"><div class="modified">Last modified by umaumax 2019-04-28 01:39:19</div><div class="created">Created by umaumax 2019-04-28 01:39:19</div></div>
                                 
                                 </section>
                             
@@ -932,7 +876,7 @@ clang++ <span class="hljs-variable">$@</span> \
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"libtooling tutorial","level":"1.3.1.1","depth":3,"next":{"title":"font","level":"1.4","depth":1,"ref":"","articles":[{"title":"monaco","level":"1.4.1","depth":2,"path":"font/monaco.md","ref":"font/monaco.md","articles":[]}]},"previous":{"title":"libtooling","level":"1.3.1","depth":2,"ref":"","articles":[{"title":"libtooling tutorial","level":"1.3.1.1","depth":3,"path":"clang/libtooling/clang-libtooling tutorial.md","ref":"clang/libtooling/clang-libtooling tutorial.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with","page-treeview","expandable-chapters","expand-active-chapter","navigator","git-author","copy-code-button"],"ignores":[".*","_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"1","minHeaderDeep":"1"},"git-author":{"position":"bottom","modifyTpl":"Last modified by {user} {timeStamp}","createTpl":"Created by {user} {timeStamp}","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"expand-active-chapter":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"language":"en","gitbook":"*"},"file":{"path":"clang/libtooling/clang-libtooling tutorial.md","mtime":"2019-04-20T02:19:23.016Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-27T16:39:33.875Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"chrome_extensions","level":"1.14.1","depth":2,"previous":{"title":"web","level":"1.14","depth":1,"ref":"","articles":[{"title":"chrome_extensions","level":"1.14.1","depth":2,"path":"web/chrome_extensions/chrome_extensions.md","ref":"web/chrome_extensions/chrome_extensions.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with","page-treeview","expandable-chapters","expand-active-chapter","navigator","git-author","copy-code-button"],"ignores":[".*","_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"1","minHeaderDeep":"1"},"git-author":{"position":"bottom","modifyTpl":"Last modified by {user} {timeStamp}","createTpl":"Created by {user} {timeStamp}","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"expand-active-chapter":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"language":"en","gitbook":"*"},"file":{"path":"web/chrome_extensions/chrome_extensions.md","mtime":"2019-04-27T16:38:04.546Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-27T16:39:33.875Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
