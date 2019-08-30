@@ -1008,9 +1008,12 @@
                                 <div class="treeview__container"><ul>
 <li><div><a href="#shared-library">shared library</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
 <ul>
-<li><div><a href="#xxx-error-while-loading-shared-libraries-yyy">xxx: error while loading shared libraries: yyy</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<li><div><a href="#xxx-error-while-loading-shared-libraries-yyy">xxx: error while loading shared libraries: yyy</a><i></i></div></li>
+<li><div><a href="#shared-library-search-order">shared library search order</a><i></i></div></li>
+<li><div><a href="#shared-library&#x306B;&#x4F9D;&#x5B58;&#x3059;&#x308B;&#x5B9F;&#x884C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x4ED6;&#x306E;&#x74B0;&#x5883;&#x3067;&#x3082;&#x52D5;&#x304B;&#x3057;&#x305F;&#x3044;">shared library&#x306B;&#x4F9D;&#x5B58;&#x3059;&#x308B;&#x5B9F;&#x884C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x4ED6;&#x306E;&#x74B0;&#x5883;&#x3067;&#x3082;&#x52D5;&#x304B;&#x3057;&#x305F;&#x3044;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
 <ul>
-<li><div><a href="#search-order">search order</a><i></i></div></li>
+<li><div><a href="#note">NOTE</a><i></i></div></li>
+<li><div><a href="#fyi">FYI</a><i></i></div></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -1027,21 +1030,49 @@
 <li>&#x4E00;&#x6642;&#x7684;&#x306A;&#x89E3;&#x6C7A;&#x7B56;&#x3068;&#x3057;&#x3066;&#x306F;&#xFF0C;<pre><code>LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib ./path_to_bin_file
 </code></pre></li>
 </ul>
-<h3 id="search_order">1.1. search order</h3>
+<h2 id="shared_library_search_order">2. shared library search order</h2>
 <ol>
 <li>&#x74B0;&#x5883;&#x5909;&#x6570;&#x3067;&#x6307;&#x5B9A;&#x3055;&#x308C;&#x305F;&#x30D1;&#x30B9;<ul>
-<li>LD_LIBRARY_PATH</li>
-<li>LD_LIBRARY_PATH_64</li>
+<li><code>LD_LIBRARY_PATH</code></li>
+<li><code>LD_LIBRARY_PATH_64</code></li>
 </ul>
 </li>
-<li>/etc/ld.so.conf &#x306B;&#x8A18;&#x8FF0;&#x3055;&#x308C;&#x305F;&#x30D1;&#x30B9;</li>
+<li><code>/etc/ld.so.conf</code> &#x306B;&#x8A18;&#x8FF0;&#x3055;&#x308C;&#x305F;&#x30D1;&#x30B9;</li>
 <li>&#x901A;&#x5E38;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x304C;&#x7F6E;&#x304B;&#x308C;&#x308B;&#x30D1;&#x30B9;<ul>
-<li>/lib (/usr/lib &#x3078;&#x306E; symbolic link)</li>
-<li>/lib64 (/usr/lib64 &#x3078;&#x306E; symbolic link)</li>
+<li><code>/lib</code> (<code>/usr/lib</code> &#x3078;&#x306E; symbolic link)</li>
+<li><code>/lib64</code> (<code>/usr/lib64</code> &#x3078;&#x306E; symbolic link)</li>
 </ul>
 </li>
 </ol>
-<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#shared_library">shared library</a></p><li><a href="#xxx:_error_while_loading_shared_libraries:_yyy">1. xxx: error while loading shared libraries: yyy</a></li><ul><li><a href="#search_order">1.1. search order</a></li></ul></ul></div><a href="#xxx:_error_while_loading_shared_libraries:_yyy" id="goTop"><i class="fa fa-arrow-up"></i></a><div class="git-author-container git-author-bottom"><div class="modified">Last modified by umaumax 2019-04-20 11:21:37</div><div class="created">Created by umaumax 2019-04-20 11:21:37</div></div>
+<h2 id="shared_library&#x306B;&#x4F9D;&#x5B58;&#x3059;&#x308B;&#x5B9F;&#x884C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x4ED6;&#x306E;&#x74B0;&#x5883;&#x3067;&#x3082;&#x52D5;&#x304B;&#x3057;&#x305F;&#x3044;">3. shared library&#x306B;&#x4F9D;&#x5B58;&#x3059;&#x308B;&#x5B9F;&#x884C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x4ED6;&#x306E;&#x74B0;&#x5883;&#x3067;&#x3082;&#x52D5;&#x304B;&#x3057;&#x305F;&#x3044;</h2>
+<p>step</p>
+<ol>
+<li>&#x4F9D;&#x5B58;&#x3059;&#x308B;&#x5171;&#x6709;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3092;&#x30EA;&#x30B9;&#x30C8;&#x30A2;&#x30C3;&#x30D7;&#x3057;&#x3066;&#x30B3;&#x30D4;&#x30FC;</li>
+<li><p>&#x4ED6;&#x306E;&#x74B0;&#x5883;&#x3067;&#x898B;&#x3064;&#x304B;&#x3089;&#x306A;&#x3044;&#x5171;&#x6709;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;<strong>&#x306E;&#x307F;</strong>&#x3092;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x3066;&#xFF0C;&#x5B9F;&#x884C;&#x3059;&#x308B;</p>
+</li>
+<li><p>&#x4F9D;&#x5B58;&#x3059;&#x308B;&#x5171;&#x6709;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3092;&#x30EA;&#x30B9;&#x30C8;&#x30A2;&#x30C3;&#x30D7;
+<code>xxx</code>: &#x5B9F;&#x884C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x540D;</p>
+<pre><code>mkdir -p libs
+lddtree -l xxx | xargs -L 1 -I{} cp {} libs
+</code></pre></li>
+<li><p>&#x4ED6;&#x306E;&#x74B0;&#x5883;&#x3067;&#x898B;&#x3064;&#x304B;&#x3089;&#x306A;&#x3044;&#x5171;&#x6709;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;<strong>&#x306E;&#x307F;</strong>&#x3092;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x3066;&#xFF0C;&#x5B9F;&#x884C;&#x3059;&#x308B;</p>
+<pre><code>LD_LIBRARY_PATH=$(ldconfig -v 2&gt;/dev/null | grep -v $&apos;\t&apos; | cut -d: -f1 | tr &apos;\n&apos; &apos;:&apos;)&quot;./libs&quot; ./xxx
+</code></pre></li>
+</ol>
+<h3 id="NOTE">3.1. NOTE</h3>
+<p>&#x5358;&#x7D14;&#x306B;&#xFF0C;<code>LD_LIBRARY_PATH</code>&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#xFF0C;&#x30EA;&#x30B9;&#x30C8;&#x30A2;&#x30C3;&#x30D7;&#x3057;&#x305F;&#x5171;&#x6709;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3092;<strong>&#x3059;&#x3079;&#x3066;</strong>&#x512A;&#x5148;&#x7684;&#x306B;&#x30ED;&#x30FC;&#x30C9;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x3068;&#xFF0C;<code>Segmentation fault</code>&#x304C;&#x767A;&#x751F;&#x3059;&#x308B;</p>
+<pre><code>LD_LIBRARY_PATH=./libs ./xxx
+Segmentation fault
+</code></pre><p>&#x5171;&#x6709;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306E;search path&#x306E;&#x4E00;&#x89A7;</p>
+<pre><code>ldconfig -v 2&gt;/dev/null | grep -v $&apos;\t&apos; | cut -d: -f1 | tr &apos;\n&apos; &apos;:&apos;
+# &#x7C21;&#x6613;&#x7684;&#x306A;&#x65B9;&#x6CD5;
+cat /etc/ld.so.conf.d/*.conf | grep -v &quot;^#&quot; | tr &apos;\n&apos; &apos;:&apos;
+</code></pre><p><code>ldd ./xxx</code>&#x3068;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x7C21;&#x5358;&#x306B;&#x4F9D;&#x5B58;&#x95A2;&#x4FC2;&#x304C;&#x308F;&#x304B;&#x308B;</p>
+<h3 id="FYI">3.2. FYI</h3>
+<ul>
+<li><code>lddtree</code>: <code>sudo apt install pax-utils</code></li>
+</ul>
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#shared_library">shared library</a></p><li><a href="#xxx:_error_while_loading_shared_libraries:_yyy">1. xxx: error while loading shared libraries: yyy</a></li><li><a href="#shared_library_search_order">2. shared library search order</a></li><li><a href="#shared_library&#x306B;&#x4F9D;&#x5B58;&#x3059;&#x308B;&#x5B9F;&#x884C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x4ED6;&#x306E;&#x74B0;&#x5883;&#x3067;&#x3082;&#x52D5;&#x304B;&#x3057;&#x305F;&#x3044;">3. shared library&#x306B;&#x4F9D;&#x5B58;&#x3059;&#x308B;&#x5B9F;&#x884C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x4ED6;&#x306E;&#x74B0;&#x5883;&#x3067;&#x3082;&#x52D5;&#x304B;&#x3057;&#x305F;&#x3044;</a></li><ul><li><a href="#NOTE">3.1. NOTE</a></li><li><a href="#FYI">3.2. FYI</a></li></ul></ul></div><a href="#xxx:_error_while_loading_shared_libraries:_yyy" id="goTop"><i class="fa fa-arrow-up"></i></a><div class="git-author-container git-author-bottom"><div class="modified">Last modified by umaumax 2019-08-31 00:28:45</div><div class="created">Created by umaumax 2019-04-20 11:21:37</div></div>
                                 
                                 </section>
                             
@@ -1084,7 +1115,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"shared_library","level":"1.11.1.4","depth":3,"next":{"title":"SGID-sticky-bit","level":"1.11.1.5","depth":3,"path":"os/Ubuntu/SUID-SGID-sticky-bit.md","ref":"os/Ubuntu/SUID-SGID-sticky-bit.md","articles":[]},"previous":{"title":"partition","level":"1.11.1.3","depth":3,"path":"os/Ubuntu/partition.md","ref":"os/Ubuntu/partition.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with","page-treeview","expandable-chapters","expand-active-chapter","navigator","git-author","copy-code-button"],"ignores":[".*","_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"1","minHeaderDeep":"1"},"git-author":{"position":"bottom","modifyTpl":"Last modified by {user} {timeStamp}","createTpl":"Created by {user} {timeStamp}","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"expand-active-chapter":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"language":"en","gitbook":"*"},"file":{"path":"os/Ubuntu/shared_library.md","mtime":"2019-04-20T02:19:23.443Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-22T14:08:50.574Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"shared_library","level":"1.11.1.4","depth":3,"next":{"title":"SGID-sticky-bit","level":"1.11.1.5","depth":3,"path":"os/Ubuntu/SUID-SGID-sticky-bit.md","ref":"os/Ubuntu/SUID-SGID-sticky-bit.md","articles":[]},"previous":{"title":"partition","level":"1.11.1.3","depth":3,"path":"os/Ubuntu/partition.md","ref":"os/Ubuntu/partition.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with","page-treeview","expandable-chapters","expand-active-chapter","navigator","git-author","copy-code-button"],"ignores":[".*","_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"1","minHeaderDeep":"1"},"git-author":{"position":"bottom","modifyTpl":"Last modified by {user} {timeStamp}","createTpl":"Created by {user} {timeStamp}","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"expand-active-chapter":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"language":"en","gitbook":"*"},"file":{"path":"os/Ubuntu/shared_library.md","mtime":"2019-08-30T15:28:16.815Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-30T15:29:04.805Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
