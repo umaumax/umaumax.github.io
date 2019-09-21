@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>monaco · GitBook</title>
+        <title>references · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -217,9 +217,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../cpp/references.html">
+        <li class="chapter active" data-level="1.4.1" data-path="references.html">
             
-                <a href="../cpp/references.html">
+                <a href="references.html">
             
                     
                     references
@@ -281,9 +281,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.6.1" data-path="monaco.html">
+        <li class="chapter " data-level="1.6.1" data-path="../font/monaco.html">
             
-                <a href="monaco.html">
+                <a href="../font/monaco.html">
             
                     
                     monaco
@@ -1031,7 +1031,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >monaco</a>
+        <a href=".." >references</a>
     </h1>
 </div>
 
@@ -1047,19 +1047,44 @@
                                 <section class="normal markdown-section">
                                 
                                 <div class="treeview__container"><ul>
-<li><div><a href="#monaco-font">Monaco font</a><i></i></div></li>
+<li><div><a href="#cpp-references">cpp references</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x4ED8;&#x304D;&#x306E;&#x578B;&#x306B;&#x5BFE;&#x3057;&#x3066;&#xFF0C;&#x81EA;&#x7531;&#x306B;&#x5024;&#x3092;&#x4EE3;&#x5165;&#x3057;&#x305F;&#x3044;">&amp;&#x4ED8;&#x304D;&#x306E;&#x578B;&#x306B;&#x5BFE;&#x3057;&#x3066;&#xFF0C;&#x81EA;&#x7531;&#x306B;&#x5024;&#x3092;&#x4EE3;&#x5165;&#x3057;&#x305F;&#x3044;</a><i></i></div></li>
+</ul></li>
 </ul>
 </div>
 
-<h1 id="Monaco_font">Monaco font</h1>
-<p><a href="https://askubuntu.com/questions/333409/how-to-install-the-monaco-font" target="_blank">How to install the Monaco font? - Ask Ubuntu</a></p>
-<blockquote>
-<p>Monaco is the default font in the iTerm terminal for Mac OS X. How can I install it on Ubuntu?</p>
-<p>Github user cstrap has a repository with a simple install script that will download and install the font.
-Just run the command</p>
-</blockquote>
-<p>ubuntu&#x3067;terminator&#x3084;guake terminal&#x306A;&#x3069;&#x3067;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x3053;&#x3068;</p>
-<div class="git-author-container git-author-bottom"><div class="modified">Last modified by umaumax 2019-04-20 11:21:37</div><div class="created">Created by umaumax 2019-04-20 11:21:37</div></div>
+<h1 id="cpp_references">cpp references</h1>
+<h2 id="_&#x4ED8;&#x304D;&#x306E;&#x578B;&#x306B;&#x5BFE;&#x3057;&#x3066;&#xFF0C;&#x81EA;&#x7531;&#x306B;&#x5024;&#x3092;&#x4EE3;&#x5165;&#x3057;&#x305F;&#x3044;">1. &amp;&#x4ED8;&#x304D;&#x306E;&#x578B;&#x306B;&#x5BFE;&#x3057;&#x3066;&#xFF0C;&#x81EA;&#x7531;&#x306B;&#x5024;&#x3092;&#x4EE3;&#x5165;&#x3057;&#x305F;&#x3044;</h2>
+<ul>
+<li><a href="https://teratail.com/questions/158884" target="_blank">C++ - &#x53C2;&#x7167;&#x306E;&#x521D;&#x671F;&#x5316;&#x3092;&#x6761;&#x4EF6;&#x5206;&#x5C90;&#x3067;&#x884C;&#x3046;&#x65B9;&#x6CD5;&#x306B;&#x3064;&#x3044;&#x3066;&#xFF5C;teratail</a></li>
+<li><a href="http://secret-garden.hatenablog.com/entry/2015/08/28/000000" target="_blank">std::vector &#x3067;&#x53C2;&#x7167;&#x3092;&#x4FDD;&#x6301;&#x3057;&#x305F;&#x3044; - Secret Garden(Instrumental)</a></li>
+</ul>
+<pre><code>#include &lt;functional&gt;
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+
+void print_first_one(const std::vector&lt;std::string&gt;&amp; vec) {
+  std::cout &lt;&lt; vec[0] &lt;&lt; std::endl;
+}
+
+int main(int argc, char* argv[]) {
+  std::vector&lt;std::string&gt; a = {&quot;alice&quot;};
+  std::vector&lt;std::string&gt; b = {&quot;bob&quot;};
+
+  std::reference_wrapper&lt;std::vector&lt;std::string&gt;&gt; target_ref = a;
+
+  std::cout &lt;&lt; target_ref.get()[0] &lt;&lt; std::endl;
+  print_first_one(target_ref);
+
+  target_ref = b;
+
+  std::cout &lt;&lt; target_ref.get()[0] &lt;&lt; std::endl;
+  print_first_one(target_ref);
+  return 0;
+}
+</code></pre><div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#cpp_references">cpp references</a></p><li><a href="#_&#x4ED8;&#x304D;&#x306E;&#x578B;&#x306B;&#x5BFE;&#x3057;&#x3066;&#xFF0C;&#x81EA;&#x7531;&#x306B;&#x5024;&#x3092;&#x4EE3;&#x5165;&#x3057;&#x305F;&#x3044;">1. &amp;&#x4ED8;&#x304D;&#x306E;&#x578B;&#x306B;&#x5BFE;&#x3057;&#x3066;&#xFF0C;&#x81EA;&#x7531;&#x306B;&#x5024;&#x3092;&#x4EE3;&#x5165;&#x3057;&#x305F;&#x3044;</a></li></ul></div><a href="#_&#x4ED8;&#x304D;&#x306E;&#x578B;&#x306B;&#x5BFE;&#x3057;&#x3066;&#xFF0C;&#x81EA;&#x7531;&#x306B;&#x5024;&#x3092;&#x4EE3;&#x5165;&#x3057;&#x305F;&#x3044;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -1094,7 +1119,7 @@ Just run the command</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"monaco","level":"1.6.1","depth":2,"next":{"title":"foods","level":"1.7","depth":1,"ref":"","articles":[{"title":"sweets","level":"1.7.1","depth":2,"path":"foods/sweets.md","ref":"foods/sweets.md","articles":[]}]},"previous":{"title":"font","level":"1.6","depth":1,"ref":"","articles":[{"title":"monaco","level":"1.6.1","depth":2,"path":"font/monaco.md","ref":"font/monaco.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with","page-treeview","expandable-chapters","expand-active-chapter","navigator","git-author","copy-code-button"],"ignores":[".*","_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"1","minHeaderDeep":"1"},"git-author":{"position":"bottom","modifyTpl":"Last modified by {user} {timeStamp}","createTpl":"Created by {user} {timeStamp}","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"expand-active-chapter":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"language":"en","gitbook":"*"},"file":{"path":"font/monaco.md","mtime":"2019-04-20T02:19:23.444Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-21T13:24:52.262Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"references","level":"1.4.1","depth":2,"next":{"title":"device","level":"1.5","depth":1,"ref":"","articles":[{"title":"camera","level":"1.5.1","depth":2,"path":"device/camera.md","ref":"device/camera.md","articles":[]}]},"previous":{"title":"cpp","level":"1.4","depth":1,"ref":"","articles":[{"title":"references","level":"1.4.1","depth":2,"path":"cpp/references.md","ref":"cpp/references.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with","page-treeview","expandable-chapters","expand-active-chapter","navigator","git-author","copy-code-button"],"ignores":[".*","_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"1","minHeaderDeep":"1"},"git-author":{"position":"bottom","modifyTpl":"Last modified by {user} {timeStamp}","createTpl":"Created by {user} {timeStamp}","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"expand-active-chapter":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"language":"en","gitbook":"*"},"file":{"path":"cpp/references.md","mtime":"2019-09-21T13:24:36.938Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-21T13:24:52.262Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
