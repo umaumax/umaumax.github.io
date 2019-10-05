@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>display · GitBook</title>
+        <title>autofs · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -79,10 +79,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="ffmpeg_build.html" />
+    <link rel="next" href="docker.html" />
     
-    
-    <link rel="prev" href="docker.html" />
     
 
     </head>
@@ -543,7 +541,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.12.1.1" data-path="autofs.html">
+        <li class="chapter active" data-level="1.12.1.1" data-path="autofs.html">
             
                 <a href="autofs.html">
             
@@ -569,7 +567,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.12.1.3" data-path="dual-display.html">
+        <li class="chapter " data-level="1.12.1.3" data-path="dual-display.html">
             
                 <a href="dual-display.html">
             
@@ -1061,7 +1059,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >display</a>
+        <a href="../.." >autofs</a>
     </h1>
 </div>
 
@@ -1077,20 +1075,79 @@
                                 <section class="normal markdown-section">
                                 
                                 <div class="treeview__container"><ul>
-<li><div><a href="#dual-display">dual display</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<li><div><a href="#autofs">autofs</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
 <ul>
-<li><div><a href="#todo-google">TODO GOOGLE</a><i></i></div></li>
+<li><div><a href="#&#x5B9F;&#x73FE;&#x3057;&#x305F;&#x3044;&#x30B3;&#x30DE;&#x30F3;&#x30C9;">&#x5B9F;&#x73FE;&#x3057;&#x305F;&#x3044;&#x30B3;&#x30DE;&#x30F3;&#x30C9;</a><i></i></div></li>
+<li><div><a href="#install">install</a><i></i></div></li>
+<li><div><a href="#setting">setting</a><i></i></div></li>
+<li><div><a href="#troubleshooting">troubleshooting</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x63A5;&#x7D9A;&#x3067;&#x304D;&#x306A;&#x3044;">&#x63A5;&#x7D9A;&#x3067;&#x304D;&#x306A;&#x3044;</a><i></i></div></li>
+<li><div><a href="#&#x30C7;&#x30D0;&#x30C3;&#x30B0;&#x3057;&#x305F;&#x3044;">&#x30C7;&#x30D0;&#x30C3;&#x30B0;&#x3057;&#x305F;&#x3044;</a><i></i></div></li>
+<li><div><a href="#&#x78BA;&#x8A8D;&#x65B9;&#x6CD5;">&#x78BA;&#x8A8D;&#x65B9;&#x6CD5;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#fyi">FYI</a><i></i></div></li>
 </ul></li>
 </ul>
 </div>
 
-<h1 id="dual_display">dual display</h1>
-<h2 id="TODO_GOOGLE">1. TODO GOOGLE</h2>
+<h1 id="autofs">autofs</h1>
+<p><a href="https://docs.oracle.com/cd/E19253-01/819-0381/rfsrefer-75/index.html" target="_blank">https://docs.oracle.com/cd/E19253-01/819-0381/rfsrefer-75/index.html</a></p>
 <ul>
-<li>workspace&#x306E;&#x4ED5;&#x69D8;&#x3092;mac&#x98A8;&#x306B;(&#x5916;&#x90E8;display&#x3068;&#x7D50;&#x5408;&#x3057;&#x305F;&#x753B;&#x9762;&#x304C;&#x8907;&#x6570;&#x306B;&#x306A;&#x3063;&#x3066;&#x3057;&#x307E;&#x3063;&#x3066;&#x3044;&#x308B;)</li>
-<li>mac&#x3067;&#x306F;app launcher&#x306F;main display&#x306B;&#x7D71;&#x5408;&#x3057;&#x3066;&#x3044;&#x308B;&#x304C;&#xFF0C;ubuntu&#x3067;&#x306F;&#x72EC;&#x7ACB;(icon menu&#x3082;&#x540C;&#x69D8;)</li>
+<li>autofs &#x30DE;&#x30A6;&#x30F3;&#x30C8;&#x304C;&#x8A2D;&#x5B9A;&#x3055;&#x308C;&#x308B;&#x3068;&#x3001;&#x8981;&#x6C42;&#x304C;&#x3042;&#x3063;&#x305F;&#x3068;&#x304D;&#x306B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x3092;&#x30DE;&#x30A6;&#x30F3;&#x30C8;&#x3059;&#x308B;<ul>
+<li>&#x3053;&#x306E;&#x51E6;&#x7406;&#x3092;&#x62C5;&#x3046;&#x30C7;&#x30FC;&#x30E2;&#x30F3;&#x304C;<code>automountd</code></li>
+<li>timeout&#x6307;&#x5B9A;&#x3067;&#x30A2;&#x30F3;&#x30DE;&#x30A6;&#x30F3;&#x30C8;&#x3055;&#x308C;&#x308B;&#x307E;&#x3067;&#xFF0C;<code>automountd</code>&#x304C;&#x52D5;&#x4F5C;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x306A;&#x304F;&#x3068;&#x3082;&#x52D5;&#x4F5C;&#x306B;&#x306F;&#x554F;&#x984C;&#x306A;&#x3044;</li>
+<li>&#x30DE;&#x30A6;&#x30F3;&#x30C8;&#x5148;&#x304C;&#x8D77;&#x52D5;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x3082;&#x3057;&#x304F;&#x306F;&#x518D;&#x8D77;&#x52D5;&#x3057;&#x305F;&#x5834;&#x5408;&#x3067;&#x3082;&#xFF0C;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3059;&#x308B;&#x305F;&#x3073;&#x306B;&#x30DE;&#x30A6;&#x30F3;&#x30C8;&#x3092;&#x8A66;&#x3059;&#x305F;&#x3081;&#xFF0C;&#x7279;&#x306B;&#x554F;&#x984C;&#x306F;&#x306A;&#x3044;&#x3068;&#x8003;&#x3048;&#x3089;&#x308C;&#x308B;</li>
 </ul>
-<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#dual_display">dual display</a></p><li><a href="#TODO_GOOGLE">1. TODO GOOGLE</a></li></ul></div><a href="#TODO_GOOGLE" id="goTop"><i class="fa fa-arrow-up"></i></a><div class="git-author-container git-author-bottom"><div class="modified">Last modified by umaumax 2019-04-20 11:21:37</div><div class="created">Created by umaumax 2019-04-20 11:21:37</div></div>
+</li>
+</ul>
+<p>&#x74B0;&#x5883;: ubuntu 16.04</p>
+<h2 id="&#x5B9F;&#x73FE;&#x3057;&#x305F;&#x3044;&#x30B3;&#x30DE;&#x30F3;&#x30C9;">1. &#x5B9F;&#x73FE;&#x3057;&#x305F;&#x3044;&#x30B3;&#x30DE;&#x30F3;&#x30C9;</h2>
+<pre><code>sudo mount -t nfs $target_host_addr:/opt/remote_data /opt/local_data
+</code></pre><h2 id="install">2. install</h2>
+<pre><code>sudo apt-get install -y autofs
+</code></pre><h2 id="setting">3. setting</h2>
+<pre><code>echo &quot;/- /etc/auto.opt.data --timeout=60&quot; | sudo tee -a /etc/auto.master
+echo &quot;/opt/local_data -fstype=nfs,r $target_host_addr:/opt/remote_data&quot; | sudo tee /etc/auto.opt.data
+
+sudo service autofs restart
+</code></pre><ul>
+<li><code>/etc/auto.master</code>&#x306B;&#x63A5;&#x7D9A;&#x3057;&#x305F;&#x3044;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30D1;&#x30B9;&#x3068;&#x305D;&#x306E;&#x30D1;&#x30B9;&#x306B;&#x5BFE;&#x5FDC;&#x3059;&#x308B;&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x30D1;&#x30B9;&#x3092;&#x8A18;&#x8FF0;&#x3057;&#xFF0C;&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x65B0;&#x898F;&#x4F5C;&#x6210;&#x3057;&#xFF0C;&#x305D;&#x306E;&#x4E2D;&#x306B;&#xFF0C;&#x8A2D;&#x5B9A;&#x3092;&#x66F8;&#x304D;&#x8FBC;&#x3080;</li>
+<li><code>/etc/auto.master</code>&#x306B;&#x3066;<code>/opt</code>&#x3068;&#x3059;&#x308B;&#x3068;&#x3001;<code>/opt</code>&#x81EA;&#x4F53;&#x304C;&#x307E;&#x305A;<code>autofs</code>type&#x3067;mount&#x3055;&#x308C;&#x308B;&#x72B6;&#x614B;&#x3068;&#x306A;&#x308B;&#x305F;&#x3081;(<code>mount</code>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3067;&#x78BA;&#x8A8D;&#x53EF;&#x80FD;)&#x3001;<code>/opt/xxx</code>&#x306A;&#x3069;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3084;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x306F;unmount&#x3059;&#x308B;&#x307E;&#x3067;&#x898B;&#x3048;&#x306A;&#x304F;&#x306A;&#x308B;&#x305F;&#x3081;&#x3001;&#x4ECA;&#x56DE;&#x306E;&#x30B1;&#x30FC;&#x30B9;&#x3067;&#x306F;&#x30C0;&#x30A4;&#x30EC;&#x30AF;&#x30C8;&#x30DE;&#x30C3;&#x30D7;&#x5F62;&#x5F0F;&#x3092;&#x5229;&#x7528;</li>
+<li><code>timeout</code>(defulat: 600sec)</li>
+</ul>
+<hr>
+<h2 id="troubleshooting">4. troubleshooting</h2>
+<h3 id="&#x63A5;&#x7D9A;&#x3067;&#x304D;&#x306A;&#x3044;">4.1. &#x63A5;&#x7D9A;&#x3067;&#x304D;&#x306A;&#x3044;</h3>
+<pre><code>mount.nfs: access denied by server while mounting
+</code></pre><ul>
+<li>NFS&#x30B5;&#x30FC;&#x30D0;&#x5074;&#x3067;&#xFF0C;<code>exportfs -v</code>, <code>showmount -e</code>&#x3067;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x306E;IP&#x30A2;&#x30C9;&#x30EC;&#x30B9;&#x304C;&#x8A31;&#x53EF;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x304B;&#x3069;&#x3046;&#x304B;&#x78BA;&#x8A8D;<ul>
+<li>&#x5FC5;&#x8981;&#x306B;&#x5FDC;&#x3058;&#x3066;&#xFF0C;<code>sudo vim /etc/exports</code>&#x3067;&#x7DE8;&#x96C6;&#x3057;&#x3066;<code>sudo exportfs -ra</code>&#x3067;&#x52D5;&#x4F5C;&#x3092;&#x4E2D;&#x65AD;&#x305B;&#x305A;&#x306B;&#x66F4;&#x65B0;&#x53EF;&#x80FD;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x30C7;&#x30D0;&#x30C3;&#x30B0;&#x3057;&#x305F;&#x3044;">4.2. &#x30C7;&#x30D0;&#x30C3;&#x30B0;&#x3057;&#x305F;&#x3044;</h3>
+<pre><code># sudo service autofs restart
+# cat /var/log/syslog
+
+# or
+
+sudo service autofs stop
+sudo /usr/sbin/automount -f -v
+sudo service autofs start
+</code></pre><h3 id="&#x78BA;&#x8A8D;&#x65B9;&#x6CD5;">4.3. &#x78BA;&#x8A8D;&#x65B9;&#x6CD5;</h3>
+<pre><code>$ mount
+...
+...
+/etc/auto.opt.data on /opt/local_data type autofs (rw,relatime,fd=6,pgrp=1330,timeout=60,minproto=5,maxproto=5,direct,pipe_ino=131609717)
+$target_host_addr:/opt/remote_data on /opt/local_data type nfs4 (rw,relatime,vers=4.0,rsize=1048576,wsize=1048576,namlen=255,hard,proto=tcp,timeo=600,retrans=2,sec=sys,clientaddr=yy.yy.yy.yy,local_lock=none,addr=xx.xx.xx.xx)
+</code></pre><h2 id="FYI">5. FYI</h2>
+<ul>
+<li><a href="http://www.maruko2.com/mw/automount_%E3%81%AE%E8%A8%AD%E5%AE%9A" target="_blank">automount &#x306E;&#x8A2D;&#x5B9A; - maruko2 Note.</a></li>
+<li><a href="https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/6/html/storage_administration_guide/s2-nfs-config-autofs" target="_blank">9.4.2. autofs &#x306E;&#x8A2D;&#x5B9A; Red Hat Enterprise Linux 6 | Red Hat Customer Portal</a></li>
+<li><a href="https://kaede.adiary.jp/nfs-on-autofs" target="_blank">autofs&#x306E;&#x8A2D;&#x5B9A; - &#x304B;&#x3048;&#x3067;&#x306E;Web&#x30ED;&#x30B0;</a></li>
+</ul>
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#autofs">autofs</a></p><li><a href="#&#x5B9F;&#x73FE;&#x3057;&#x305F;&#x3044;&#x30B3;&#x30DE;&#x30F3;&#x30C9;">1. &#x5B9F;&#x73FE;&#x3057;&#x305F;&#x3044;&#x30B3;&#x30DE;&#x30F3;&#x30C9;</a></li><li><a href="#install">2. install</a></li><li><a href="#setting">3. setting</a></li><li><a href="#troubleshooting">4. troubleshooting</a></li><ul><li><a href="#&#x63A5;&#x7D9A;&#x3067;&#x304D;&#x306A;&#x3044;">4.1. &#x63A5;&#x7D9A;&#x3067;&#x304D;&#x306A;&#x3044;</a></li><li><a href="#&#x30C7;&#x30D0;&#x30C3;&#x30B0;&#x3057;&#x305F;&#x3044;">4.2. &#x30C7;&#x30D0;&#x30C3;&#x30B0;&#x3057;&#x305F;&#x3044;</a></li><li><a href="#&#x78BA;&#x8A8D;&#x65B9;&#x6CD5;">4.3. &#x78BA;&#x8A8D;&#x65B9;&#x6CD5;</a></li></ul><li><a href="#FYI">5. FYI</a></li></ul></div><a href="#&#x5B9F;&#x73FE;&#x3057;&#x305F;&#x3044;&#x30B3;&#x30DE;&#x30F3;&#x30C9;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -1117,12 +1174,8 @@
 
             
                 
-                <a href="docker.html" class="navigation navigation-prev " aria-label="Previous page: docker">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="ffmpeg_build.html" class="navigation navigation-next " aria-label="Next page: ffmpeg_build">
+                <a href="docker.html" class="navigation navigation-next navigation-unique" aria-label="Next page: docker">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1133,7 +1186,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"display","level":"1.12.1.3","depth":3,"next":{"title":"ffmpeg_build","level":"1.12.1.4","depth":3,"path":"os/Ubuntu/ffmpeg_build.md","ref":"os/Ubuntu/ffmpeg_build.md","articles":[]},"previous":{"title":"docker","level":"1.12.1.2","depth":3,"path":"os/Ubuntu/docker.md","ref":"os/Ubuntu/docker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with","page-treeview","expandable-chapters","expand-active-chapter","navigator","git-author","copy-code-button"],"ignores":[".*","_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"1","minHeaderDeep":"1"},"git-author":{"position":"bottom","modifyTpl":"Last modified by {user} {timeStamp}","createTpl":"Created by {user} {timeStamp}","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"expand-active-chapter":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"language":"en","gitbook":"*"},"file":{"path":"os/Ubuntu/dual-display.md","mtime":"2019-04-20T02:19:23.444Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-05T10:40:13.619Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"autofs","level":"1.12.1.1","depth":3,"next":{"title":"docker","level":"1.12.1.2","depth":3,"path":"os/Ubuntu/docker.md","ref":"os/Ubuntu/docker.md","articles":[]},"previous":{"title":"Ubuntu","level":"1.12.1","depth":2,"ref":"","articles":[{"title":"autofs","level":"1.12.1.1","depth":3,"path":"os/Ubuntu/autofs.md","ref":"os/Ubuntu/autofs.md","articles":[]},{"title":"docker","level":"1.12.1.2","depth":3,"path":"os/Ubuntu/docker.md","ref":"os/Ubuntu/docker.md","articles":[]},{"title":"display","level":"1.12.1.3","depth":3,"path":"os/Ubuntu/dual-display.md","ref":"os/Ubuntu/dual-display.md","articles":[]},{"title":"ffmpeg_build","level":"1.12.1.4","depth":3,"path":"os/Ubuntu/ffmpeg_build.md","ref":"os/Ubuntu/ffmpeg_build.md","articles":[]},{"title":"partition","level":"1.12.1.5","depth":3,"path":"os/Ubuntu/partition.md","ref":"os/Ubuntu/partition.md","articles":[]},{"title":"shared_library","level":"1.12.1.6","depth":3,"path":"os/Ubuntu/shared_library.md","ref":"os/Ubuntu/shared_library.md","articles":[]},{"title":"SGID-sticky-bit","level":"1.12.1.7","depth":3,"path":"os/Ubuntu/SUID-SGID-sticky-bit.md","ref":"os/Ubuntu/SUID-SGID-sticky-bit.md","articles":[]},{"title":"ja-16.04-desktop-amd64.iso init setup","level":"1.12.1.8","depth":3,"path":"os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.md","ref":"os/Ubuntu/ubuntu-ja-16.04-desktop-amd64.iso init setup.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with","page-treeview","expandable-chapters","expand-active-chapter","navigator","git-author","copy-code-button"],"ignores":[".*","_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"1","minHeaderDeep":"1"},"git-author":{"position":"bottom","modifyTpl":"Last modified by {user} {timeStamp}","createTpl":"Created by {user} {timeStamp}","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"expand-active-chapter":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"language":"en","gitbook":"*"},"file":{"path":"os/Ubuntu/autofs.md","mtime":"2019-10-05T10:40:08.549Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-05T10:40:13.619Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
