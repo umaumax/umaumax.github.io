@@ -1107,14 +1107,14 @@
 <ul>
 <li><div><a href="#&#x65E2;&#x5B58;&#x306E;zshrc&#x306B;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x4F8B;">&#x65E2;&#x5B58;&#x306E;zshrc&#x306B;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x4F8B;</a><i></i></div></li>
 <li><div><a href="#fpath&#x306B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x4F8B;">fpath&#x306B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x4F8B;</a><i></i></div></li>
+<li><div><a href="#&#x81EA;&#x4F5C;&#x306E;git-subcommand&#x306E;&#x88DC;&#x5B8C;&#x3092;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;">&#x81EA;&#x4F5C;&#x306E;git subcommand&#x306E;&#x88DC;&#x5B8C;&#x3092;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;</a><i></i></div></li>
+<li><div><a href="#&#x4EFB;&#x610F;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x306E;&#x88DC;&#x5B8C;&#x3092;hook&#x3057;&#x305F;&#x3044;">&#x4EFB;&#x610F;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x306E;&#x88DC;&#x5B8C;&#x3092;hook&#x3057;&#x305F;&#x3044;</a><i></i></div></li>
+<li><div><a href="#qa">Q&amp;A</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x88DC;&#x5B8C;&#x306E;&#x512A;&#x5148;&#x9806;&#x4F4D;&#x306F;">&#x88DC;&#x5B8C;&#x306E;&#x512A;&#x5148;&#x9806;&#x4F4D;&#x306F;?</a><i></i></div></li>
+<li><div><a href="#zsh&#x3067;&#x88DC;&#x5B8C;&#x304C;&#x52B9;&#x304B;&#x306A;&#x3044;">zsh&#x3067;&#x88DC;&#x5B8C;&#x304C;&#x52B9;&#x304B;&#x306A;&#x3044;</a><i></i></div></li>
 </ul></li>
-<li><div><a href="#compdef-nyan">compdef nyan</a><i></i></div></li>
-<li><div><a href="#compdef-git-animal">compdef git-animal</a><i></i></div></li>
-<li><div><a href="#compdef-git">compdef git</a><i></i></div></li>
-<li><div><a href="#fyi-zsh---rename-selfdefined-function---super-user">FYI: zsh - Rename selfdefined function - Super User</a><i></i></div></li>
-<li><div><a href="#note-this-replace-above-files-git-function">NOTE: this replace above file&apos;s _git function</a><i></i></div></li>
-<li><div><a href="#1st-call-original-git-call-of-above-source-file">1st call: original _git call of above source file</a><i></i></div></li>
-<li><div><a href="#2nd-calls-this-function">2nd~ calls: this function</a><i></i></div></li>
+</ul></li>
 </ul>
 </div>
 
@@ -1141,65 +1141,60 @@ function _hogecmd {
 )
 mkdir -p ~/local/share/zsh/site-functions
 </code></pre><p><a href="https://gist.github.com/mitukiii/4954559" target="_blank">zsh &#x306E;&#x88DC;&#x5B8C;&#x95A2;&#x6570;&#x306E;&#x81EA;&#x4F5C;&#x5C0E;&#x5165;&#x7DE8;</a></p>
-<pre><code>
-
-</code></pre><p>function nyan() {
+<pre><code>function nyan() {
   echo &apos;nya-!&apos;
-}</p>
-<pre><code>
-`~/local/share/zsh/site-functions/_nyan`
-</code></pre><h1 id="compdef_nyan">compdef nyan</h1>
-<p>_nyan() {
+}
+</code></pre><p><code>~/local/share/zsh/site-functions/_nyan</code></p>
+<pre><code>#compdef nyan
+
+_nyan() {
   _values \
     &apos;mode&apos; \
     &apos;neko&apos; \
     &apos;usagi&apos; \
     &apos;kuma&apos; \
     &apos;github&apos;
-}</p>
-<pre><code>
-## &#x81EA;&#x4F5C;&#x306E;git subcommand&#x306E;&#x88DC;&#x5B8C;&#x3092;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;
+}
+</code></pre><h2 id="&#x81EA;&#x4F5C;&#x306E;git_subcommand&#x306E;&#x88DC;&#x5B8C;&#x3092;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;">3. &#x81EA;&#x4F5C;&#x306E;git subcommand&#x306E;&#x88DC;&#x5B8C;&#x3092;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;</h2>
+<p>&#x4E0B;&#x8A18;&#x306E;repo&#x304C;&#x53C2;&#x8003;&#x306B;&#x306A;&#x308A;&#x305D;&#x3046;&#x3060;&#x304C;&#xFF0C;&#x3046;&#x307E;&#x304F;&#x3044;&#x304B;&#x305A;...
+<a href="https://github.com/tj/git-extras" target="_blank">tj/git-extras: GIT utilities -- repo summary, repl, changelog population, author commit percentages and more</a></p>
+<p>&#x65B9;&#x91DD;: <code>/usr/local/share/zsh/site-functions/_git</code>&#x306E;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x53C2;&#x8003;&#x306B;&#x62E1;&#x5F35;&#x3059;&#x308B;&#x3053;&#x3068;&#x3092;&#x76EE;&#x6307;&#x3059;
+&#x8ABF;&#x67FB;&#x7D50;&#x679C;: <code>__git_zsh_bash_func</code>&#x5185;&#x3067;&#x306F;<code>emulate -L ksh</code>&#x306E;&#x72B6;&#x614B;&#x3067;<code>_git_xxx</code>&#x306E;&#x95A2;&#x6570;&#x304C;&#x5B58;&#x5728;&#x3059;&#x308B;&#x304B;&#x3069;&#x3046;&#x304B;&#x3092;&#x5224;&#x5B9A;&#x3057;&#xFF0C;&#x305D;&#x308C;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#xFF0C;<code>_git_xxx</code>&#x3092;&#x5B9A;&#x7FA9;&#x3059;&#x308C;&#x3070;&#x81EA;&#x52D5;&#x7684;&#x306B;&#x88DC;&#x5B8C;&#x3055;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;</p>
+<p>&#x88DC;&#x8DB3;
+fpath&#x306B;&#x5B58;&#x5728;&#x3059;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x540D;&#x3067;</p>
+<pre><code>_xxx () {
+    # undefined
+    builtin autoload -XUz
+}
+</code></pre><p>&#x304C;&#x5BA3;&#x8A00;&#x3055;&#x308C;&#x308B;</p>
+<p>&#x7D50;&#x8AD6;
+<code>_git_animal</code></p>
+<pre><code>#compdef git-animal
 
-&#x4E0B;&#x8A18;&#x306E;repo&#x304C;&#x53C2;&#x8003;&#x306B;&#x306A;&#x308A;&#x305D;&#x3046;&#x3060;&#x304C;&#xFF0C;&#x3046;&#x307E;&#x304F;&#x3044;&#x304B;&#x305A;...
-[tj/git\-extras: GIT utilities \-\- repo summary, repl, changelog population, author commit percentages and more]( https://github.com/tj/git-extras )
+_git_animal() {
+  emulate -L zsh
 
-&#x65B9;&#x91DD;: `/usr/local/share/zsh/site-functions/_git`&#x306E;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x53C2;&#x8003;&#x306B;&#x62E1;&#x5F35;&#x3059;&#x308B;&#x3053;&#x3068;&#x3092;&#x76EE;&#x6307;&#x3059;
-&#x8ABF;&#x67FB;&#x7D50;&#x679C;: `__git_zsh_bash_func`&#x5185;&#x3067;&#x306F;`emulate -L ksh`&#x306E;&#x72B6;&#x614B;&#x3067;`_git_xxx`&#x306E;&#x95A2;&#x6570;&#x304C;&#x5B58;&#x5728;&#x3059;&#x308B;&#x304B;&#x3069;&#x3046;&#x304B;&#x3092;&#x5224;&#x5B9A;&#x3057;&#xFF0C;&#x305D;&#x308C;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#xFF0C;`_git_xxx`&#x3092;&#x5B9A;&#x7FA9;&#x3059;&#x308C;&#x3070;&#x81EA;&#x52D5;&#x7684;&#x306B;&#x88DC;&#x5B8C;&#x3055;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;
-
-&#x88DC;&#x8DB3;
-fpath&#x306B;&#x5B58;&#x5728;&#x3059;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x540D;&#x3067;
-</code></pre><p>_xxx () {</p>
-<pre><code># undefined
-builtin autoload -XUz
-</code></pre><p>}</p>
-<pre><code>&#x304C;&#x5BA3;&#x8A00;&#x3055;&#x308C;&#x308B;
-
-&#x7D50;&#x8AD6;
-`_git_animal`
-</code></pre><h1 id="compdef_git-animal">compdef git-animal</h1>
-<p>_git_animal() {
-  emulate -L zsh</p>
-<p>  _values \
+  _values \
     &apos;mode&apos; \
     &apos;cat&apos; \
     &apos;dog&apos; \
     &apos;bird&apos;
-}</p>
-<pre><code>&#x3068;&#x3059;&#x308B;&#x3068;&#xFF0C;`_git-animal`&#x3068;&#x3044;&#x3046;&#x95A2;&#x6570;&#x306F;&#x5B58;&#x5728;&#x3057;&#x306A;&#x3044;&#x304C;&#xFF0C;`git-animal`&#x95A2;&#x6570;&#x306E;&#x88DC;&#x5B8C;&#x7528;&#x306E;&#x95A2;&#x6570;&#x306F;`_git_animal`&#x3068;&#x306A;&#x308B;
+}
+</code></pre><p>&#x3068;&#x3059;&#x308B;&#x3068;&#xFF0C;<code>_git-animal</code>&#x3068;&#x3044;&#x3046;&#x95A2;&#x6570;&#x306F;&#x5B58;&#x5728;&#x3057;&#x306A;&#x3044;&#x304C;&#xFF0C;<code>git-animal</code>&#x95A2;&#x6570;&#x306E;&#x88DC;&#x5B8C;&#x7528;&#x306E;&#x95A2;&#x6570;&#x306F;<code>_git_animal</code>&#x3068;&#x306A;&#x308B;
 &#x304B;&#x3064;&#xFF0C;
-&#x3053;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;`_git-animal`&#x3092;&#x9045;&#x5EF6;&#x8AAD;&#x307F;&#x8FBC;&#x307F;&#x3059;&#x308B;&#x95A2;&#x6570;&#x304C;&#x81EA;&#x52D5;&#x751F;&#x6210;&#x3055;&#x308C;&#x308B;&#x306E;&#x3067;
-`git-animal`&#x3068;`git animal`&#x306E;&#x4E21;&#x65B9;&#x306E;&#x88DC;&#x5B8C;&#x3092;&#x884C;&#x3046;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;
+&#x3053;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;<code>_git-animal</code>&#x3092;&#x9045;&#x5EF6;&#x8AAD;&#x307F;&#x8FBC;&#x307F;&#x3059;&#x308B;&#x95A2;&#x6570;&#x304C;&#x81EA;&#x52D5;&#x751F;&#x6210;&#x3055;&#x308C;&#x308B;&#x306E;&#x3067;
+<code>git-animal</code>&#x3068;<code>git animal</code>&#x306E;&#x4E21;&#x65B9;&#x306E;&#x88DC;&#x5B8C;&#x3092;&#x884C;&#x3046;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;</p>
+<h2 id="&#x4EFB;&#x610F;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x306E;&#x88DC;&#x5B8C;&#x3092;hook&#x3057;&#x305F;&#x3044;">4. &#x4EFB;&#x610F;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x306E;&#x88DC;&#x5B8C;&#x3092;hook&#x3057;&#x305F;&#x3044;</h2>
+<p><code>_git</code>&#x306E;subcommand&#x306E;&#x62E1;&#x5F35;&#x306F;<code>_git</code>&#x306E;&#x4E2D;&#x3067;&#x7528;&#x610F;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x304C;&#xFF0C;&#x305D;&#x3046;&#x3067;&#x306F;&#x306A;&#x3044;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x306E;&#x5834;&#x5408;&#x306B;&#x306F;&#x4E0B;&#x8A18;&#x306E;&#x624B;&#x6CD5;&#x3067;hook&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;</p>
+<p><code>~/local/share/zsh/site-functions/_git</code>: <code>$fpath</code>&#x306B;&#x8A18;&#x8F09;&#x3055;&#x308C;&#x305F;<code>/usr/local/share/zsh/site-functions/_git</code>&#x3088;&#x308A;&#x3082;&#x524D;&#x306E;path&#x306B;&#x914D;&#x7F6E;</p>
+<pre><code>#compdef git
 
-## &#x4EFB;&#x610F;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x306E;&#x88DC;&#x5B8C;&#x3092;hook&#x3057;&#x305F;&#x3044;
-`_git`&#x306E;subcommand&#x306E;&#x62E1;&#x5F35;&#x306F;`_git`&#x306E;&#x4E2D;&#x3067;&#x7528;&#x610F;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x304C;&#xFF0C;&#x305D;&#x3046;&#x3067;&#x306F;&#x306A;&#x3044;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x306E;&#x5834;&#x5408;&#x306B;&#x306F;&#x4E0B;&#x8A18;&#x306E;&#x624B;&#x6CD5;&#x3067;hook&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;
+. /usr/local/share/zsh/site-functions/_git
 
-`~/local/share/zsh/site-functions/_git`: `$fpath`&#x306B;&#x8A18;&#x8F09;&#x3055;&#x308C;&#x305F;`/usr/local/share/zsh/site-functions/_git`&#x3088;&#x308A;&#x3082;&#x524D;&#x306E;path&#x306B;&#x914D;&#x7F6E;
-</code></pre><h1 id="compdef_git">compdef git</h1>
-<p>. /usr/local/share/zsh/site-functions/_git</p>
-<h1 id="FYI:_zsh_-_Rename_selfdefined_function_-_Super_User">FYI: <a href="https://superuser.com/questions/553153/rename-selfdefined-function" target="_blank">zsh - Rename selfdefined function - Super User</a></h1>
-<p>rename_func() {
+# FYI: [zsh \- Rename selfdefined function \- Super User]( https://superuser.com/questions/553153/rename-selfdefined-function )
+rename_func() {
   if (( $# != 2 )); then
-    echo &quot;Usage: rename_func <oldname> <newname>&quot; &gt;&amp;2
+    echo &quot;Usage: rename_func &lt;oldname&gt; &lt;newname&gt;&quot; &gt;&amp;2
     return 1
   fi
   oldname=$1
@@ -1207,38 +1202,36 @@ builtin autoload -XUz
   local code=$(echo &quot;$newname () {&quot;; whence -f $oldname | tail -n +2)
   unset -f $oldname
   eval &quot;$code&quot;
-}</newname></oldname></p>
-<h1 id="NOTE:_this_replace_above_file&apos;s__git_function">NOTE: this replace above file&apos;s _git function</h1>
-<p>rename_func _git _git_orig</p>
-<h1 id="1st_call:_original__git_call_of_above_source_file">1st call: original _git call of above source file</h1>
-<h1 id="2nd~_calls:_this_function">2nd~ calls: this function</h1>
-<p>_git() {</p>
-<h1 id="local_cur=${words[CURRENT]}">local cur=${words[CURRENT]}</h1>
-<p>  local prev=${words[CURRENT-1]}
-  if type &gt;/dev/null 2&gt;&amp;1 <em>git</em>${prev}; then
-    <em>git</em>${prev}
+}
+
+# NOTE: this replace above file&apos;s _git function
+rename_func _git _git_orig
+
+# 1st call: original _git call of above source file
+# 2nd~ calls: this function
+_git() {
+  # local cur=${words[CURRENT]}
+  local prev=${words[CURRENT-1]}
+  if type &gt;/dev/null 2&gt;&amp;1 _git_${prev}; then
+    _git_${prev}
     return
   fi
   _git_orig
-}</p>
-<pre><code>
-----
-
-## Q&amp;A
-### &#x88DC;&#x5B8C;&#x306E;&#x512A;&#x5148;&#x9806;&#x4F4D;&#x306F;?
-`$fpath`&#x306E;&#x691C;&#x7D22;&#x3067;&#x6700;&#x521D;&#x306B;hit&#x3057;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;
-
-### zsh&#x3067;&#x88DC;&#x5B8C;&#x304C;&#x52B9;&#x304B;&#x306A;&#x3044;
-</code></pre><p>rm ~/.zcompdump
-```</p>
-<ul>
+}
+</code></pre><hr>
+<h2 id="Q_A">5. Q&amp;A</h2>
+<h3 id="&#x88DC;&#x5B8C;&#x306E;&#x512A;&#x5148;&#x9806;&#x4F4D;&#x306F;?">5.1. &#x88DC;&#x5B8C;&#x306E;&#x512A;&#x5148;&#x9806;&#x4F4D;&#x306F;?</h3>
+<p><code>$fpath</code>&#x306E;&#x691C;&#x7D22;&#x3067;&#x6700;&#x521D;&#x306B;hit&#x3057;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;</p>
+<h3 id="zsh&#x3067;&#x88DC;&#x5B8C;&#x304C;&#x52B9;&#x304B;&#x306A;&#x3044;">5.2. zsh&#x3067;&#x88DC;&#x5B8C;&#x304C;&#x52B9;&#x304B;&#x306A;&#x3044;</h3>
+<pre><code>rm ~/.zcompdump
+</code></pre><ul>
 <li>&#x7279;&#x306B;&#x65B0;&#x898F;&#x306B;<code>$fpath</code>&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#xFF0C;&#x305D;&#x3053;&#x306B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x305F;&#x969B;&#x306B;&#x3053;&#x306E;&#x73FE;&#x8C61;&#x306B;&#x906D;&#x9047;&#x3059;&#x308B;<ul>
 <li>&#x307E;&#x305F;&#xFF0C;<code>_xxx</code>&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x7DE8;&#x96C6;&#x3057;&#x305F;&#x5834;&#x5408;&#x306B;&#x3082;&#x4E0A;&#x8A18;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5B9F;&#x884C;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;&#x305F;&#x3081;&#x6CE8;&#x610F;</li>
 </ul>
 </li>
 <li>&#x73FE;&#x5728;&#x5B58;&#x5728;&#x3057;&#x306A;&#x3044;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x88DC;&#x5B8C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304C;&#x4FDD;&#x7BA1;&#x3055;&#x308C;&#x308B;&#x5834;&#x5408;&#x306B;&#x306F;&#x4E0A;&#x8A18;&#x306E;cache&#x304C;&#x539F;&#x56E0;&#x3067;&#x3042;&#x308B;</li>
 </ul>
-<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#local_cur=$%7Bwords[CURRENT]%7D">local cur=${words[CURRENT]}</a></p><li><a href="#&#x65E2;&#x5B58;&#x306E;zshrc&#x306B;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x4F8B;">1. &#x65E2;&#x5B58;&#x306E;zshrc&#x306B;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x4F8B;</a></li><li><a href="#fpath&#x306B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x4F8B;">2. fpath&#x306B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x4F8B;</a></li></ul></div><a href="#&#x65E2;&#x5B58;&#x306E;zshrc&#x306B;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x4F8B;" id="goTop"><i class="fa fa-arrow-up"></i></a>
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#zsh&#x3067;&#x306E;&#x81EA;&#x4F5C;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x88DC;&#x5B8C;">zsh&#x3067;&#x306E;&#x81EA;&#x4F5C;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x88DC;&#x5B8C;</a></p><li><a href="#&#x65E2;&#x5B58;&#x306E;zshrc&#x306B;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x4F8B;">1. &#x65E2;&#x5B58;&#x306E;zshrc&#x306B;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x4F8B;</a></li><li><a href="#fpath&#x306B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x4F8B;">2. fpath&#x306B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x4F8B;</a></li><li><a href="#&#x81EA;&#x4F5C;&#x306E;git_subcommand&#x306E;&#x88DC;&#x5B8C;&#x3092;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;">3. &#x81EA;&#x4F5C;&#x306E;git subcommand&#x306E;&#x88DC;&#x5B8C;&#x3092;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;</a></li><li><a href="#&#x4EFB;&#x610F;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x306E;&#x88DC;&#x5B8C;&#x3092;hook&#x3057;&#x305F;&#x3044;">4. &#x4EFB;&#x610F;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x306E;&#x88DC;&#x5B8C;&#x3092;hook&#x3057;&#x305F;&#x3044;</a></li><li><a href="#Q_A">5. Q&amp;A</a></li><ul><li><a href="#&#x88DC;&#x5B8C;&#x306E;&#x512A;&#x5148;&#x9806;&#x4F4D;&#x306F;?">5.1. &#x88DC;&#x5B8C;&#x306E;&#x512A;&#x5148;&#x9806;&#x4F4D;&#x306F;?</a></li><li><a href="#zsh&#x3067;&#x88DC;&#x5B8C;&#x304C;&#x52B9;&#x304B;&#x306A;&#x3044;">5.2. zsh&#x3067;&#x88DC;&#x5B8C;&#x304C;&#x52B9;&#x304B;&#x306A;&#x3044;</a></li></ul></ul></div><a href="#&#x65E2;&#x5B58;&#x306E;zshrc&#x306B;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x4F8B;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -1281,7 +1274,7 @@ builtin autoload -XUz
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"completion","level":"1.15.8","depth":2,"next":{"title":"zsh","level":"1.15.9","depth":2,"path":"shell/zsh.md","ref":"shell/zsh.md","articles":[]},"previous":{"title":"ssh","level":"1.15.7","depth":2,"path":"shell/ssh.md","ref":"shell/ssh.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with","page-treeview","expandable-chapters","expand-active-chapter","navigator","git-author","copy-code-button"],"ignores":[".*","_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"1","minHeaderDeep":"1"},"git-author":{"position":"bottom","modifyTpl":"Last modified by {user} {timeStamp}","createTpl":"Created by {user} {timeStamp}","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"expand-active-chapter":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"language":"en","gitbook":"*"},"file":{"path":"shell/zsh-completion.md","mtime":"2019-11-02T15:02:55.639Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-02T15:05:01.688Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"completion","level":"1.15.8","depth":2,"next":{"title":"zsh","level":"1.15.9","depth":2,"path":"shell/zsh.md","ref":"shell/zsh.md","articles":[]},"previous":{"title":"ssh","level":"1.15.7","depth":2,"path":"shell/ssh.md","ref":"shell/ssh.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","hide-published-with","page-treeview","expandable-chapters","expand-active-chapter","navigator","git-author","copy-code-button"],"ignores":[".*","_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-treeview":{"copyright":"","minHeaderCount":"1","minHeaderDeep":"1"},"git-author":{"position":"bottom","modifyTpl":"Last modified by {user} {timeStamp}","createTpl":"Created by {user} {timeStamp}","timeStampFormat":"YYYY-MM-DD HH:mm:ss"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-published-with":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"navigator":{},"expand-active-chapter":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"language":"en","gitbook":"*"},"file":{"path":"shell/zsh-completion.md","mtime":"2019-11-02T15:06:47.500Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-02T15:07:36.745Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
